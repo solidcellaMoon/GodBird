@@ -8,23 +8,20 @@ public class SceneChange : MonoBehaviour
 {
     public GameObject[] panel = new GameObject [2];
     public GameObject touchXXX;
+
     public void ChangeToMiniGame(){
-        if(dateManager.gameRetry > 0) {
-        //dateManager.gameRetry ++;
-        SceneManager.LoadScene("MiniGame");
-        dateManager.dateNum ++;
-        //UItext.text = ": " + scoreManager.beanScore.ToString();
-        } else{
-            //panel = GameObject.Find("MinigamePanel");
-            PanelOpen(0,true);
-            // 이번주의 축복은 모두 끝났습니다.
-        }
+        if(dateManager.gameRetry > 0) SceneManager.LoadScene("MiniGame");
+        else PanelOpen(0,true);
     }
 
     public void ChangeToMain(){
-        // 미니게임 -> 메인화면 돌아오기 전용
-        if(SceneManager.GetActiveScene().name == "MiniGame") ScoreLoad();
         SceneManager.LoadScene("MainScreen");
+    }
+
+    public void ChangeToDateEvt(){
+        // 미니게임을 끝내고 난 뒤 실행
+        if(SceneManager.GetActiveScene().name == "MiniGame") ScoreLoad();
+        SceneManager.LoadScene("eventScene");
     }
 
     public void ChangeToList(){
@@ -32,7 +29,6 @@ public class SceneChange : MonoBehaviour
     }
 
     public void ChangeToTalk(){
-        //panel = GameObject.Find("CourseSelect");
         PanelOpen(1,true);
     }
 
@@ -62,7 +58,6 @@ public class SceneChange : MonoBehaviour
     void Start()
     {
         Screen.SetResolution(450,800,false);
-        //panel.SetActive(false);
     }
 
     // Update is called once per frame

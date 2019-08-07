@@ -5,7 +5,6 @@ using UnityEngine;
 public class enemyController : MonoBehaviour
 {
     public int enemyType; // 타입 구분 변수
-
     public float xSpeed;
     public float delta; // 상하 이동 가능 최대 길이
     public int sinSpeed; // 상하 이동 속도
@@ -28,14 +27,15 @@ public class enemyController : MonoBehaviour
         if(lifeManager.lifeNum == 0) Destroy(gameObject);
         else{
         if(!isDie){
-            //xSpeed *= Time.deltaTime;
+
         switch(enemyType){
             case 1: // x축 방향으로 이동한다.
             transform.Translate(xSpeed*Time.deltaTime,0,0); break;
 
             case 2: // 지그재그로 이동한다.
             // delta, sinSpeed
-            transform.Translate(xSpeed*Time.deltaTime,delta*Mathf.Sin(Time.time*sinSpeed),0);
+            transform.Translate(xSpeed*Time.deltaTime,
+                                delta*Mathf.Sin(Time.time*sinSpeed),0);
             break;
 
             case 3: // 플레이어 방향으로 돌진한다.
@@ -43,7 +43,8 @@ public class enemyController : MonoBehaviour
             Type3Move(); break;
             }
         }
-        else Die();}
+        else Die();
+        }
 
     // 범위 이탈시 삭제
         if(transform.position.x < -4.5f
@@ -71,10 +72,8 @@ public class enemyController : MonoBehaviour
 
         void OnTriggerEnter2D(Collider2D collision){
 
-        if(PlayerMove.superTime == true && PlayerMove.unBeatTime == false) {
-            isDie = true;
-        }
-        if(PlayerMove.unBeatTime == true && dashScript.inputDashDwn) isDie = true;
+        if(PlayerMove.superTime) isDie = true;
+        else isDie = false;
         
     }
 

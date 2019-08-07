@@ -41,9 +41,8 @@ public class PlayerMove : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision){
 
-        if(superTime == false) {
+        if(!superTime && !unBeatTime) {
         lifeManager.lifeNum--;
-        superTime = true;
         unBeatTime = true;
         StartCoroutine(UnBeatTime());
         }
@@ -55,7 +54,7 @@ public class PlayerMove : MonoBehaviour
         int countTime = 0;
 
         if(lifeManager.lifeNum != 0)
-        while(countTime < 7){
+        while(countTime < 10){
             // Alpha effect
             if(countTime%2 == 0)
             GetComponent<SpriteRenderer>().color = new Color32(255,255,255,90);
@@ -69,7 +68,6 @@ public class PlayerMove : MonoBehaviour
 
         //effect end
         GetComponent<SpriteRenderer>().color = new Color32(255,255,255,255);
-        superTime = false;
         unBeatTime = false;
 
         yield return null;

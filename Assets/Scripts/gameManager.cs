@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class retryManager : MonoBehaviour
+public class gameManager : MonoBehaviour
 {
-    public static int retryNum;
+
     // Start is called before the first frame update
     void Start()
     {
-        retryNum = 3;
+
     }
 
     // Update is called once per frame
@@ -16,4 +17,5 @@ public class retryManager : MonoBehaviour
     {
         
     }
+
 }

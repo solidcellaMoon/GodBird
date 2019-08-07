@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class gameoverManager : MonoBehaviour
 {   
-    public GameObject Player, Generater, BasicUI, GameOverUI;
+    public GameObject GameOverUI;
+    public GameObject[] obj = new GameObject [3];
     PlayerMove playerScript;
     public Text retryText;
     public Camera mainCamera;
@@ -13,7 +14,7 @@ public class gameoverManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerScript = Player.GetComponent<PlayerMove> ();
+        playerScript = obj[0].GetComponent<PlayerMove> ();
     }
 
     // Update is called once per frame
@@ -21,11 +22,14 @@ public class gameoverManager : MonoBehaviour
     {
         if(lifeManager.lifeNum == 0){
             mainCamera.backgroundColor = new Color32 (0,0,0,0);
-            if(Player.activeSelf) dateManager.gameRetry--;
-            Player.gameObject.SetActive(false);
-            Generater.gameObject.SetActive(false);
-            BasicUI.gameObject.SetActive(false);
-            GameOverUI.gameObject.SetActive(true);
+
+            if(obj[0].activeSelf) {
+                dateManager.gameRetry--;
+                for(int i = 0; i < obj.Length; i++)
+                    if(obj[i].activeSelf) obj[i].SetActive(false);
+                GameOverUI.gameObject.SetActive(true); 
+                }
+           
 
            if(dateManager.gameRetry > 0)
             retryText.text = "남은 도전 횟수\n" + 

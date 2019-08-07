@@ -4,38 +4,28 @@ using UnityEngine;
 
 public class itemGenerator : MonoBehaviour
 {
-
-    public GameObject beanPrefab, dicePrefab, heartPrefab;
-    float span = 1.0f, delta = 0, time = 0.32f;
-    public int px = 10; float py = 0;
-    public int itemNum = 20; // 한번 시행에 생성되는 템 개수
-    int heartLimit = 3; // 한 판에 3번까지만 하트 생성
+    public GameObject[] prefab = new GameObject [3];
     GameObject item;
+    float span = 1.0f, delta = 0, time = 0.25f;
+    public int px; float py = 0;
+    public int itemNum; // 한번 시행에 생성되는 템 개수
+    int heartLimit = 3; // 한 판에 3번까지만 하트 생성
 
     void Start(){
-        time = 1;
+        
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        
-
-        // 게임 오버시
-        if(lifeManager.lifeNum == 0){
-            time = 1;
-        } else {
-            px = 10;
-
-            this.delta += time*Time.deltaTime;
-            if(this.delta > this.span){
+        px = 10;
+        this.delta += time*Time.deltaTime;
+        if(this.delta > this.span){
                 this.delta = 0;
                 py += Random.Range(-2,3);
                 makeItem(itemNum);
                 time = 0.32f;
-            }
-
         }
     }
 
@@ -48,16 +38,17 @@ public class itemGenerator : MonoBehaviour
             // 확률적으로 주사위 생성 (기본은 콩)
             int whatIs = Random.Range(0,1000);
             if(whatIs > 970) //주사위 생성
-                item = Instantiate(dicePrefab) as GameObject;
+                item = Instantiate(prefab[1]) as GameObject;
                 
             else if(whatIs > 1) //콩 생성
-                item = Instantiate(beanPrefab) as GameObject;
+                item = Instantiate(prefab[0]) as GameObject;
             
             else { // 하트 생성
                 if(heartLimit > 0){
-                    item = Instantiate(heartPrefab) as GameObject;
-                    heartLimit --; }
-                else item = Instantiate(dicePrefab) as GameObject;
+                    item = Instantiate(prefab[2]) as GameObject;
+                    heartLimit --; 
+                    }
+                else item = Instantiate(prefab[1]) as GameObject;
             }
 
             item.transform.position = new Vector3(px,py,0);

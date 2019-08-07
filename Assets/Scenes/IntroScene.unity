@@ -392,7 +392,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 605d3144105cfef42bb7d463084f46ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UItext: {fileID: 0}
+  panel:
+  - {fileID: 0}
+  - {fileID: 0}
+  touchXXX: {fileID: 0}
 --- !u!4 &574152146
 Transform:
   m_ObjectHideFlags: 0

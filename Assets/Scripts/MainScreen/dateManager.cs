@@ -11,7 +11,7 @@ public class dateManager : MonoBehaviour
     // 일주일이 지나면 날짜는 다시 0 부터 초기화
 
     public Text uiText;
-    string date; // 요일 글자
+    public static string date; // 요일 글자
 
     public static int gameRetry = 3; // 일주일간 미니게임 가능 횟수
 
@@ -19,16 +19,15 @@ public class dateManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if(dateNum % 7 == 0) gameRetry = 3; // 월요일이면 미니게임 횟수 리셋
+        dateCalc();
+        weekNum = dateNum / 7;
+        uiText.text = weekNum.ToString() + "\n" + date;
     }
 
     // Update is called once per frame
     void Update()
     {   
-        if(dateNum % 7 == 0) gameRetry = 3; // 월요일이면 미니게임 횟수 리셋
-        dateCalc();
-        weekNum = dateNum / 7;
-        uiText.text = weekNum.ToString() + "\n" + date;
         
     }
 

@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\MainScreen\dateManager.cs" />
      <Compile Include="Assets\Scripts\MainScreen\itemManager.cs" />
+     <Compile Include="Assets\Scripts\MainScreen\itemText.cs" />
      <Compile Include="Assets\Scripts\MiniGame\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\MiniGame\buttonManager.cs" />
      <Compile Include="Assets\Scripts\MiniGame\cloudController.cs" />
@@ -62,15 +63,17 @@
      <Compile Include="Assets\Scripts\MiniGame\dashAttack.cs" />
      <Compile Include="Assets\Scripts\MiniGame\enemyController.cs" />
      <Compile Include="Assets\Scripts\MiniGame\enemyGenerator.cs" />
-     <Compile Include="Assets\Scripts\MiniGame\gameManager.cs" />
      <Compile Include="Assets\Scripts\MiniGame\gameoverManager.cs" />
      <Compile Include="Assets\Scripts\MiniGame\itemController.cs" />
      <Compile Include="Assets\Scripts\MiniGame\itemGenerator.cs" />
      <Compile Include="Assets\Scripts\MiniGame\lifeManager.cs" />
      <Compile Include="Assets\Scripts\MiniGame\lifeUpdate.cs" />
-     <Compile Include="Assets\Scripts\MiniGame\retryManager.cs" />
      <Compile Include="Assets\Scripts\MiniGame\scoreManager.cs" />
+     <Compile Include="Assets\Scripts\MiniGame\startScirpt.cs" />
      <Compile Include="Assets\Scripts\SceneChange.cs" />
+     <Compile Include="Assets\Scripts\dateEvent\dailyEvent.cs" />
+     <Compile Include="Assets\Scripts\dateEvent\textManager.cs" />
+     <Compile Include="Assets\Scripts\gameManager.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/unity_project/any-talk/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

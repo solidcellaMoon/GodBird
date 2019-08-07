@@ -5,11 +5,10 @@ using UnityEngine;
 public class enemyGenerator : MonoBehaviour
 {
 
-    public GameObject enemy1Prefab,enemy2Prefab,enemy3Prefab;
+    public GameObject[] prefab = new GameObject [3];
+    GameObject enemy;
     float span = 1.0f; float delta = 0; float time;
     public int px = 5; float py;
-    GameObject enemy;
-
     Vector3 playerPos;
 
     void Start(){
@@ -18,7 +17,6 @@ public class enemyGenerator : MonoBehaviour
 
     void Update()
     {
-
         playerPos = GameObject.Find("Player").transform.position;
 
         this.delta += time*Time.deltaTime;
@@ -35,10 +33,8 @@ public class enemyGenerator : MonoBehaviour
             enemy.transform.position = new Vector3(px,py,0);
 
             time += 0.1f;
-            if(time > 3.6f) {
-                //Debug.Log("최고 레벨 도달");
-                time = Random.Range(3f,4f);
-            }
+            // 최고 레벨 도달
+            if(time > 3.6f) time = Random.Range(3f,4f);
 
         } 
     
@@ -48,14 +44,14 @@ public class enemyGenerator : MonoBehaviour
     void SelectType(){
         int who = Random.Range(0,101);
 
-        if(who <= 75) // 0~13 까지 1번 타입 생성
-            enemy = Instantiate(enemy1Prefab) as GameObject;
+        if(who <= 75)
+            enemy = Instantiate(prefab[0]) as GameObject;
 
-        else if(who <= 95) // 14~17 까지 2번 타입 생성
-            enemy = Instantiate(enemy2Prefab) as GameObject;
+        else if(who <= 95)
+            enemy = Instantiate(prefab[1]) as GameObject;
             
-        else{ // 18~20 까지 3번 타입 생성
-                enemy = Instantiate(enemy3Prefab) as GameObject;
+        else{
+                enemy = Instantiate(prefab[2]) as GameObject;
                 py = Random.Range(3.5f,4.5f) * isPlus();
             }
     }

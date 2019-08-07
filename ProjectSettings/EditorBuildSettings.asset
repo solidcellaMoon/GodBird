@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TalkScene.unity
     guid: 137dae15b67bfcb4eb62debf68d4c6f5
+  - enabled: 1
+    path: Assets/Scenes/eventScene.unity
+    guid: f56d08fec8e136e49b9e7effd8bdfeda
   m_configObjects: {}

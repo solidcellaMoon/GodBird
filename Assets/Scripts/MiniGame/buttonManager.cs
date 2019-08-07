@@ -37,13 +37,6 @@ public class buttonManager : MonoBehaviour
 
     public void DashOff(){
         dashScript.inputDashUp = true;
-        //dashScript.inputDash = false;
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
