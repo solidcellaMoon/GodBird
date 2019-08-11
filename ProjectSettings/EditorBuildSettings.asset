@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScreen.unity
     guid: a2763cd6f5e8f3548a74138cb2365c08
   - enabled: 1
-    path: Assets/Scenes/ListScene.unity
-    guid: b4e51f0b54cff1840a0401b0b5ea3f48
-  - enabled: 1
     path: Assets/Scenes/MiniGame.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -23,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/eventScene.unity
     guid: f56d08fec8e136e49b9e7effd8bdfeda
+  - enabled: 1
+    path: Assets/Scenes/SundayScene.unity
+    guid: 59e7928db0f2cd3458cd9698095f70ed
   m_configObjects: {}

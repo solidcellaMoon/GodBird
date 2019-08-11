@@ -555,7 +555,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.5
   m_Text: "\uC624\uB298\uB3C4 \uD3C9\uC628\uD569\uB2C8\uB2E4."
 --- !u!222 &1408949396
 CanvasRenderer:
@@ -767,7 +767,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.5
   m_Text: 
 --- !u!222 &1945050651
 CanvasRenderer:

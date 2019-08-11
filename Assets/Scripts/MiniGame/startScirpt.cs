@@ -8,7 +8,7 @@ public class startScirpt : MonoBehaviour
     public GameObject startUI;
     public GameObject Manager, Player, Generator;
     Vector3 initPos = new Vector3 (-2.62f,0,0);
-    float moveSpeed = 4f;
+    float moveSpeed = 6f;
     public Text uiText;
     int countTime = 4;
 
@@ -21,14 +21,20 @@ public class startScirpt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
+        
         if(Player.activeSelf){
             Player.transform.Translate(moveSpeed*Time.deltaTime,0,0);
-            moveSpeed *= 0.987f;
+            moveSpeed *= 0.95f;
             if(Player.transform.position.x > initPos.x)
             Player.transform.position = initPos; 
         }
 
-        if(countTime < -1) Destroy(startUI);
+        if(countTime < -1) {
+            Player.GetComponent<PlayerMove>().enabled = true;
+            Player.GetComponent<dashAttack>().enabled = true;
+            Destroy(startUI);
+        }
+         
     }
 
      IEnumerator CountDown(){

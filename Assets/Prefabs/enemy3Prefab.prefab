@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 3
-  xSpeed: -7
+  xSpeed: -10
   delta: 0
   sinSpeed: 0
-  ySpeed: -0.1
+  ySpeed: -0.2

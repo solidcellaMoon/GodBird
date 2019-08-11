@@ -53,9 +53,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\MainScreen\InfoManager.cs" />
+     <Compile Include="Assets\Scripts\MainScreen\churchManager.cs" />
+     <Compile Include="Assets\Scripts\MainScreen\churchText.cs" />
      <Compile Include="Assets\Scripts\MainScreen\dateManager.cs" />
      <Compile Include="Assets\Scripts\MainScreen\itemManager.cs" />
      <Compile Include="Assets\Scripts\MainScreen\itemText.cs" />
+     <Compile Include="Assets\Scripts\MainScreen\npcButton.cs" />
+     <Compile Include="Assets\Scripts\MainScreen\npcManager.cs" />
+     <Compile Include="Assets\Scripts\MiniGame\FrameChecker.cs" />
      <Compile Include="Assets\Scripts\MiniGame\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\MiniGame\buttonManager.cs" />
      <Compile Include="Assets\Scripts\MiniGame\cloudController.cs" />
@@ -71,6 +77,11 @@
      <Compile Include="Assets\Scripts\MiniGame\scoreManager.cs" />
      <Compile Include="Assets\Scripts\MiniGame\startScirpt.cs" />
      <Compile Include="Assets\Scripts\SceneChange.cs" />
+     <Compile Include="Assets\Scripts\SundayScene\debtManager.cs" />
+     <Compile Include="Assets\Scripts\SundayScene\levelUpEvent.cs" />
+     <Compile Include="Assets\Scripts\SundayScene\panelScript.cs" />
+     <Compile Include="Assets\Scripts\SundayScene\scoreLoad.cs" />
+     <Compile Include="Assets\Scripts\SundayScene\successEvent.cs" />
      <Compile Include="Assets\Scripts\dateEvent\dailyEvent.cs" />
      <Compile Include="Assets\Scripts\dateEvent\textManager.cs" />
      <Compile Include="Assets\Scripts\gameManager.cs" />

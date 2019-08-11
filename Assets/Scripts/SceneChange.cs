@@ -15,7 +15,9 @@ public class SceneChange : MonoBehaviour
     }
 
     public void ChangeToMain(){
-        SceneManager.LoadScene("MainScreen");
+        if(SceneManager.GetActiveScene().name == "eventScene"
+        && dateManager.dateNum % 7 == 6)  SceneManager.LoadScene("SundayScene");
+        else SceneManager.LoadScene("MainScreen");
     }
 
     public void ChangeToDateEvt(){
@@ -25,7 +27,13 @@ public class SceneChange : MonoBehaviour
     }
 
     public void ChangeToList(){
-        SceneManager.LoadScene("ListScene");
+        PanelOpen(2,true);
+        //SceneManager.LoadScene("ListScene");
+    }
+
+    public void CloseList(){
+        if(!panel[1].activeSelf) touchXXX.SetActive(false);
+        panel[2].SetActive(false);
     }
 
     public void ChangeToTalk(){
@@ -58,6 +66,7 @@ public class SceneChange : MonoBehaviour
     void Start()
     {
         Screen.SetResolution(450,800,false);
+        Application.targetFrameRate = 60;
     }
 
     // Update is called once per frame
