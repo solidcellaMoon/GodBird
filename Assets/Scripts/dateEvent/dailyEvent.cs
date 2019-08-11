@@ -17,8 +17,10 @@ public class dailyEvent : MonoBehaviour
         int index = 0;
         int npcBuff = 1;
 
-        foreach(bool isTrue in npcManager.npcList)
-        if(isTrue) { npcBuff *= npcManager.npcAbilty[index];  ++index; }
+        foreach(bool isTrue in npcManager.npcList){
+            if(isTrue) npcBuff *= npcManager.npcAbilty[index]; index++;
+        }
+
 
         itemManager.birdNum += chBuff*npcBuff;
 
