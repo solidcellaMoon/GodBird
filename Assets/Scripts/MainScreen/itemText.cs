@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class itemText : MonoBehaviour
 {
-    public Text scoreText;
-    
+    public Text beanInfo;
+    public Text diceInfo;
+
     // Start is called before the first frame update
     void Start()
     {
-        scoreText.text = ": " + itemManager.beanNum.ToString()
-                        +"\n: " + itemManager.diceNum.ToString();
+        beanInfo.text = ": " + itemManager.beanNum.ToString();
+        diceInfo.text = ": " + itemManager.diceNum.ToString();
     }
 
     // Update is called once per frame
