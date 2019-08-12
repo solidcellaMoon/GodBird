@@ -15,14 +15,13 @@ public class itemManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreText.text = ": " + beanNum.ToString()
-                        +"\n: " + diceNum.ToString();
-        birdText.text = "신도: " + birdNum.ToString();
-
     }
 
     // Update is called once per frame
     void Update()
     {
+        scoreText.text = ": " + beanNum.ToString()
+                        +"\n: " + diceNum.ToString();
+        birdText.text = "신도: " + birdNum.ToString();
     }
 }

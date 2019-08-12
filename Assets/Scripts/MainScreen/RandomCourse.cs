@@ -38,7 +38,7 @@ public class RandomCourse : MonoBehaviour
         new placeInfo("북극설원",5,6)
     };
     //현재 뽑힌 장소 정보 리스트(계속 갱신)
-    private placeInfo[] placeNow = new placeInfo[4];
+    public static placeInfo[] placeNow = new placeInfo[4];
 
     //현재 코스 4개의 장소 이름 텍스트 오브젝트 리스트(계속 갱신)
     [SerializeField] private Text[] txt_place;

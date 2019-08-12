@@ -14,8 +14,14 @@ public class npcManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        npcList[2] = true;
-        npcGage[2] = 100;
+        //npcList[2] = true;
+        //npcGage[2] = 100;
+        for(int i = 0; i < 6; i++){
+            if(npcGage[i] >= 99){
+                npcList[i] = true;
+                npcGage[i] = 100;
+            }
+        }
     }
 
     // Update is called once per frame

@@ -54,6 +54,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\MainScreen\InfoManager.cs" />
+     <Compile Include="Assets\Scripts\MainScreen\MapChecker.cs" />
+     <Compile Include="Assets\Scripts\MainScreen\MapIdetify.cs" />
      <Compile Include="Assets\Scripts\MainScreen\RandomCourse.cs" />
      <Compile Include="Assets\Scripts\MainScreen\churchManager.cs" />
      <Compile Include="Assets\Scripts\MainScreen\churchText.cs" />
@@ -83,44 +85,56 @@
      <Compile Include="Assets\Scripts\SundayScene\panelScript.cs" />
      <Compile Include="Assets\Scripts\SundayScene\scoreLoad.cs" />
      <Compile Include="Assets\Scripts\SundayScene\successEvent.cs" />
+     <Compile Include="Assets\Scripts\TalkScene\DialogManager.cs" />
+     <Compile Include="Assets\Scripts\TalkScene\ImageController.cs" />
+     <Compile Include="Assets\Scripts\TalkScene\JsonData.cs" />
+     <Compile Include="Assets\Scripts\TalkScene\MapController.cs" />
+     <Compile Include="Assets\Scripts\TalkScene\MapManager.cs" />
+     <Compile Include="Assets\Scripts\TalkScene\MapReceiver.cs" />
+     <Compile Include="Assets\Scripts\TalkScene\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\TalkScene\Problem.cs" />
+     <Compile Include="Assets\Scripts\TalkScene\TimeAttackController.cs" />
+     <Compile Include="Assets\Scripts\TalkScene\TravelingManager.cs" />
+     <Compile Include="Assets\Scripts\TalkScene\TypingEffect.cs" />
+     <Compile Include="Assets\Scripts\TalkScene\supervisor.cs" />
      <Compile Include="Assets\Scripts\dateEvent\dailyEvent.cs" />
      <Compile Include="Assets\Scripts\dateEvent\textManager.cs" />
      <Compile Include="Assets\Scripts\gameManager.cs" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/dayoung/Desktop/GodBird/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/user/Desktop/GodBird/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/dayoung/Desktop/GodBird/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/user/Desktop/GodBird/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/dayoung/Desktop/GodBird/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/user/Desktop/GodBird/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/dayoung/Desktop/GodBird/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/user/Desktop/GodBird/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/dayoung/Desktop/GodBird/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/user/Desktop/GodBird/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/dayoung/Desktop/GodBird/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/user/Desktop/GodBird/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/dayoung/Desktop/GodBird/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/user/Desktop/GodBird/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/dayoung/Desktop/GodBird/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>C:/Users/user/Desktop/GodBird/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/Users/dayoung/Desktop/GodBird/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>C:/Users/user/Desktop/GodBird/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/dayoung/Desktop/GodBird/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>C:/Users/user/Desktop/GodBird/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/dayoung/Desktop/GodBird/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/user/Desktop/GodBird/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/dayoung/Desktop/GodBird/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/user/Desktop/GodBird/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0a6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -295,6 +309,12 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0a6/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0a6/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0a6/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0a6/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

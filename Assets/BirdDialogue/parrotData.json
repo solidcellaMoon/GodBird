@@ -1,0 +1,139 @@
+{
+    "problems" : [
+ {
+   "question": "Annyung! Nan Aeng mu sae ya! Neo nun~?",
+   "example1": "좋은 아침!",
+   "example2": "안녕~",
+   "example3": "난 까치야!",
+   "answer": "난 까치야!",
+   "soso": "안녕~",
+   "meeting": "유황앵무새를 만났다. 앵무새는 여러 나라를 여행하는 사교적인 새이다."
+ },
+ {
+   "question": "Neo kkongji git e cham meut jji da!",
+   "example1": "나도 반가워~",
+   "example2": "하하. 너도 멋져~",
+   "example3": "그냥 산책하고 있았어.",
+   "answer": "하하. 너도 멋져~",
+   "soso": "나도 반가워~",
+   "meeting": "유황앵무새를 만났다. 앵무새는 여러 나라를 여행하는 사교적인 새이다."
+ },
+ {
+   "question": "Daum e ddo boja chin gu~~!",
+   "example1": "잘 가~",
+   "example2": "고마워!",
+   "example3": "그래 좋아.",
+   "answer": "그래 좋아.",
+   "soso": "잘 가~",
+   "meeting": "유황앵무새를 만났다. 앵무새는 여러 나라를 여행하는 사교적인 새이다."
+ },
+ {
+   "question": "Yeogiseo mo hae~?",
+   "example1": "나는 바람 쐬러 나왔어.",
+   "example2": "뭐라고?",
+   "example3": "여긴 웬일이야?",
+   "answer": "나는 바람 쐬러 나왔어.",
+   "soso": "여긴 웬일이야?",
+   "meeting": "공원에서 앵무새를 만났다. 친근하게 말을 걸어온다."
+ },
+ {
+   "question": "Nanun oranmane jajeon geo tareo nawat zi.",
+   "example1": "비가 많이 오는데.",
+   "example2": "좋은 취미를 가졌네!",
+   "example3": "눈이 부셔서~",
+   "answer": "비가 많이 오는데.",
+   "soso": "좋은 취미를 가졌네!",
+   "meeting": "공원에서 앵무새를 만났다. 친근하게 말을 걸어온다."
+ },
+ {
+   "question": "Yeok si bicycle bi olttae taya jam itzy~",
+   "example1": "저쪽으로 가면 있어!",
+   "example2": "흠, 나는 그다지…",
+   "example3": "그래 좋아!",
+   "answer": "흠, 나는 그다지…",
+   "soso": "그래 좋아!",
+   "meeting": "공원에서 앵무새를 만났다. 친근하게 말을 걸어온다."
+ },
+ {
+   "question": "Ba bbe da ba bba!! Kun il e ya~~",
+   "example1": "헐 어떡해?",
+   "example2": "무슨 일이야?",
+   "example3": "안녕 친구~",
+   "answer": "무슨 일이야?",
+   "soso": "안녕 친구~",
+   "meeting": "길에서 앵무새를 만났다. 다급해 보인다."
+ },
+ {
+   "question": "Onul kka ji zzak mart sale handagu~",
+   "example1": "수리공을 부르는 게 낫지 않을까?",
+   "example2": "하하. 나도 알고 있어.",
+   "example3": "두루마리 휴지 미리 사놔야겠다.",
+   "answer": "두루마리 휴지 미리 사놔야겠다.",
+   "soso": "하하. 나도 알고 있어.",
+   "meeting": "길에서 앵무새를 만났다. 다급해 보인다."
+ },
+ {
+   "question": "Neoga pilyo han geotdo sada julgae if you want!",
+   "example1": "나도 금방 갈 거라 괜찮아~",
+   "example2": "나는 별로 필요 없어.",
+   "example3": "우리 집은 깨끗한 걸.",
+   "answer": "나도 금방 갈 거라 괜찮아~",
+   "soso": "나는 별로 필요 없어.",
+   "meeting": "길에서 앵무새를 만났다. 다급해 보인다."
+ },
+ {
+   "question": "Yeogi jiyeok language neomu aryeoweo…",
+   "example1": "너만 그런 거 아니니까 걱정 마!",
+   "example2": "나도 이사 온 지 얼마 안됐어!",
+   "example3": "글쎄, 나는 여기 오래 살았어서.",
+   "answer": "너만 그런 거 아니니까 걱정 마!",
+   "soso": "글쎄, 나는 여기 오래 살았어서.",
+   "meeting": "길에서 앵무새를 만났다. 고민이 있는 것 같다."
+ },
+ {
+   "question": "Hakwon en danigi silen girl~",
+   "example1": "아마 귀여운 인형이 좋지 않을까?",
+   "example2": "하하, 그럴 나이지.",
+   "example3": "내 친구 병아리랑 똑같네~",
+   "answer": "내 친구 병아리랑 똑같네~",
+   "soso": "하하, 그럴 나이지.",
+   "meeting": "길에서 앵무새를 만났다. 고민이 있는 것 같다."
+ },
+ {
+   "question": "Gen chana! Nanun chocheonjae jjang-jjang man~~",
+   "example1": "이 정도로 뭘~",
+   "example2": "넌 정말 재미있는 친구구나!",
+   "example3": "힘내! 잘 될 거야.",
+   "answer": "넌 정말 재미있는 친구구나!",
+   "soso": "힘내! 잘 될 거야.",
+   "meeting": "길에서 앵무새를 만났다. 고민이 있는 것 같다."
+ },
+ {
+   "question": "You odi ga? ge strange yeabaedang?",
+   "example1": "우리는 신성한 종교라굿!",
+   "example2": "매일 기도드리러 가는 거야.",
+   "example3": "너도 충분히 할 수 있어.",
+   "answer": "매일 기도드리러 가는 거야.",
+   "soso": "우리는 신성한 종교라굿!",
+   "meeting": "예배당 앞에서 앵무새를 만났다. 호기심 가득한 표정으로 쳐다본다."
+ },
+ {
+   "question": "Nado neoga mo hanun ji gunggums~~",
+   "example1": "너는 종교활동 안해?",
+   "example2": "보여주는 거야 어렵지 않지!",
+   "example3": "같이 일요일마다 가자.",
+   "answer": "보여주는 거야 어렵지 않지!",
+   "soso": "같이 일요일마다 가자.",
+   "meeting": "예배당 앞에서 앵무새를 만났다. 호기심 가득한 표정으로 쳐다본다."
+ },
+ {
+   "question": "There will be jam! Yeol sim hi halgae!!",
+   "example1": "다음주 수요일 어때?",
+   "example2": "우리 ㅇㅇ교는 먹을 것도 많이 줘!",
+   "example3": "아주 좋은 자세야ㅎㅎ",
+   "answer": "아주 좋은 자세야ㅎㅎ",
+   "soso": "다음주 수요일 어때?",
+   "meeting": "예배당 앞에서 앵무새를 만났다. 호기심 가득한 표정으로 쳐다본다."
+ }
+]
+}
