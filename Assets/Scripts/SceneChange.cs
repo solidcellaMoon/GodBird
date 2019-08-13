@@ -41,7 +41,32 @@ public class SceneChange : MonoBehaviour
     }
 
     public void StartTalk(){
-        SceneManager.LoadScene("TalkScene");
+        if (RandomCourse.Costsum > itemManager.beanNum)
+        {
+            PanelOpen(4, true);
+        }
+        else
+        {
+            SceneManager.LoadScene("TalkScene");
+            itemManager.beanNum = itemManager.beanNum - RandomCourse.Costsum;
+        }
+    }
+
+    public void AlertWindow()
+    {
+        PanelOpen(3, true);
+    }
+
+    public void CloseAlert()
+    {
+        if (!panel[1].activeSelf) touchXXX.SetActive(false);
+        panel[3].SetActive(false);
+    }
+
+    public void CloseAlert2()
+    {
+        if (!panel[1].activeSelf) touchXXX.SetActive(false);
+        panel[4].SetActive(false);
     }
 
     public void ScoreLoad(){

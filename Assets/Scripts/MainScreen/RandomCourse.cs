@@ -27,15 +27,17 @@ public struct placeInfo
 }
 public class RandomCourse : MonoBehaviour
 {
+    public static int Costsum;
+
     //장소 정보 입력
     private placeInfo[] placeList = new placeInfo[]
     {
         new placeInfo("잔디공원",0,1),
-        new placeInfo("바름배움촌",1,2),
-        new placeInfo("회색도심",2,3),
-        new placeInfo("야자바다",3,4),
-        new placeInfo("정글숲",4,5),
-        new placeInfo("북극설원",5,6)
+        new placeInfo("바름배움촌",10,2),
+        new placeInfo("회색도심",20,3),
+        new placeInfo("야자바다",30,4),
+        new placeInfo("정글숲",40,5),
+        new placeInfo("북극설원",50,6)
     };
     //현재 뽑힌 장소 정보 리스트(계속 갱신)
     public static placeInfo[] placeNow = new placeInfo[4];
@@ -52,6 +54,8 @@ public class RandomCourse : MonoBehaviour
     [SerializeField] private int diceCost;
     //주사위 없고 콩으로 주사위 구매한 횟수 변수
     [SerializeField] private int clickcount = 0;
+    //외출 비용 정보 텍스트 오브젝트
+    [SerializeField] private Text txt_SumBeancost;
 
     //주사위 버튼 이름 리스트(맞춰보기용)
     [SerializeField] private string[] DiceButton = { "dice reset1", "dice reset2", "dice reset3", "dice reset4" };
@@ -202,6 +206,16 @@ public class RandomCourse : MonoBehaviour
             }
         }
         placeNow_renew(press_reset, 0);
+    }
+
+    public void Sum()
+    {
+        Costsum = 0;
+        for (int i = 0; i < placeNow.Length; i++)
+        {
+            Costsum = Costsum + placeNow[i].cost;
+        }
+        txt_SumBeancost.text = "총 " + Costsum + " 콩 소모";
     }
 
     // Update is called once per frame
