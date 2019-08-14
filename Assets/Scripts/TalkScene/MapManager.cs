@@ -14,15 +14,17 @@ public class MapManager : MonoBehaviour
     public Transform endPoint;
     public static bool check = false; // ?
     public static int index = 0; // 배열 확인용인듯 함
+    public GameObject npcPos;
     int cnt = 0;
 
     public GameObject Canvas, DialManager;
+    public static int birdType;
 
     // Start is called before the first frame update
     void Start()
     {
         for(int i = 0; i < 4; i++){
-            //map[i] = GameObject.Find("북극설원");
+            //map[i] = GameObject.Find("바름배움촌");
             map[i] = GameObject.Find(RandomCourse.placeNow[i].name);
             // 비활성화 오브젝트는 Find로 못찾음.....
             // 비활성화된걸 찾는 방법도 있긴 있던데 적용이 다 안돼서
@@ -31,6 +33,7 @@ public class MapManager : MonoBehaviour
         map[index].transform.position = startPoint.position;
         // 첫시작 맵 = 배열 첫 원소
         map[index].SetActive(true); // 첫시작 맵을 지나감
+        birdSelect();
 
     }
 
@@ -42,9 +45,8 @@ public class MapManager : MonoBehaviour
         {
             map[index].transform.Translate(-1f * speed * Time.deltaTime, 0, 0);
         //StartCoroutine(countTime());
-
+            
         if(!DialManager.activeSelf) speed = 3;
-
         //speed = 3;
 /*
             if(map[index].transform.position.x < -10.5f){
@@ -78,6 +80,17 @@ public class MapManager : MonoBehaviour
 
             //배열 길이보다 작으면 순서 +1
             else index++;
+            birdSelect();
+            switch(birdType){
+                case 0: case 1: case 2: 
+                npcPos.transform.position = new Vector3 (14.87f,1.94f,0); break;
+                case 3: case 4:
+                npcPos.transform.position = new Vector3 (14.87f,2,0); break;
+                case 5:
+                npcPos.transform.position = new Vector3 (14.87f,1.87f,0); break;
+            }
+
+
 
             map[index].transform.position = startPoint.position;
             //map[index].SetActive(true);
@@ -89,5 +102,21 @@ public class MapManager : MonoBehaviour
             SceneManager.LoadScene("eventScene");
         }
 
+    }
+    void birdSelect(){
+        switch(MapChecker.mapOutput[index]){
+            case 0: // 잔디공원
+            birdType = Random.Range(0,2); break;
+            case 1: // 바름배움촌
+            birdType = Random.Range(1,3); break;
+            case 2: // 회색도심
+            birdType = Random.Range(0,2); if(birdType == 1) birdType = 2;  break;
+            case 3: // 야자바다
+            birdType = Random.Range(3,5); break;
+            case 4: // 정글숲
+            birdType = Random.Range(4,6); break;
+            case 5: // 북극설원
+            birdType = Random.Range(3,5); if(birdType == 3) birdType = 5; break;
+        }
     }
 }

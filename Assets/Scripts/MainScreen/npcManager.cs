@@ -10,6 +10,8 @@ public class npcManager : MonoBehaviour
     // 각 npc 별 신도수 증가 수치
     public static int[] npcGage = {0,0,0,0,0,0};
     // 호감도 수치
+    public static int[] npcEnc = {0,0,0,0,0,0};
+    // npc별 만남 횟수
 
     // Start is called before the first frame update
     void Start()

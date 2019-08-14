@@ -96,6 +96,8 @@
      <Compile Include="Assets\Scripts\TalkScene\TimeAttackController.cs" />
      <Compile Include="Assets\Scripts\TalkScene\TravelingManager.cs" />
      <Compile Include="Assets\Scripts\TalkScene\TypingEffect.cs" />
+     <Compile Include="Assets\Scripts\TalkScene\motionController.cs" />
+     <Compile Include="Assets\Scripts\TalkScene\skyController.cs" />
      <Compile Include="Assets\Scripts\TalkScene\supervisor.cs" />
      <Compile Include="Assets\Scripts\dateEvent\dailyEvent.cs" />
      <Compile Include="Assets\Scripts\dateEvent\textManager.cs" />
@@ -309,6 +311,9 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0a6/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="LitJson">
+ <HintPath>C:/Users/user/Desktop/GodBird/Assets/Plugins/LitJson.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0a6/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
