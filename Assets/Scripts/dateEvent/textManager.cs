@@ -27,6 +27,7 @@ public class textManager : MonoBehaviour
         while(true) { 
             if(countTime == 1) {
                 dateManager.dateNum++;
+                dateManager.weekNum = dateManager.dateNum / 7;
                 dailyEvent.SetActive(true);
             }
             countTime++;

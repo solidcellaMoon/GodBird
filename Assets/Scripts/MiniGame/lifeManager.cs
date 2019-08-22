@@ -15,5 +15,7 @@ public class lifeManager : MonoBehaviour
     {
         if(lifeNum > 6) lifeNum = 6;
         if(lifeNum < 0) lifeNum = 0;
+        // 한 판에 400 이상은 못 얻는다.
+        if(scoreManager.beanScore > 399) lifeNum = 0;
     }
 }

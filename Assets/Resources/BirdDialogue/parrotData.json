@@ -1,0 +1,409 @@
+{
+    "problems" : [
+ {
+   "question": "Annyung!\nNan Aeng mu sae ya!\nNeo nun~?",
+   "example1": "좋은 아침!",
+   "example2": "안녕~",
+   "example3": "난 까치야!",
+   "answer": "난 까치야!",
+   "soso": "안녕~",
+   "meeting": "유황앵무새를 만났다.\n앵무새는 여러 나라를 여행하는\n사교적인 새이다."
+ },
+ {
+   "question": "Neo kkongji git e\ncham meut jji da!",
+   "example1": "나도 반가워~",
+   "example2": "하하. 너도 멋져~",
+   "example3": "그냥 산책하고 있았어.",
+   "answer": "하하. 너도 멋져~",
+   "soso": "나도 반가워~",
+   "meeting": "유황앵무새를 만났다.\n앵무새는 여러 나라를 여행하는 사교적인 새이다."
+ },
+ {
+   "question": "Daum e ddo boja chin gu~~!",
+   "example1": "잘 가~",
+   "example2": "고마워!",
+   "example3": "그래 좋아.",
+   "answer": "그래 좋아.",
+   "soso": "잘 가~",
+   "meeting": "유황앵무새를 만났다.\n앵무새는 여러 나라를 여행하는 사교적인 새이다."
+ },
+ {
+   "question": "Yeogiseo mo hae~?",
+   "example1": "나는 바람 쐬러 나왔어.",
+   "example2": "뭐라고?",
+   "example3": "여긴 웬일이야?",
+   "answer": "나는 바람 쐬러 나왔어.",
+   "soso": "여긴 웬일이야?",
+   "meeting": "공원에서 앵무새를 만났다.\n친근하게 말을 걸어온다."
+ },
+ {
+   "question": "Nanun oranmane\njajeon geo\ntareo nawat zi.",
+   "example1": "비가 많이 오는데.",
+   "example2": "좋은 취미를 가졌네!",
+   "example3": "눈이 부셔서~",
+   "answer": "비가 많이 오는데.",
+   "soso": "좋은 취미를 가졌네!",
+   "meeting": "공원에서 앵무새를 만났다.\n친근하게 말을 걸어온다."
+ },
+ {
+   "question": "Yeok si bicycle\nbi olttae taya jam itzy~",
+   "example1": "저쪽으로 가면 있어!",
+   "example2": "흠, 나는 그다지…",
+   "example3": "그래 좋아!",
+   "answer": "흠, 나는 그다지…",
+   "soso": "그래 좋아!",
+   "meeting": "공원에서 앵무새를 만났다.\n친근하게 말을 걸어온다."
+ },
+ {
+   "question": "Ba bbe da ba bba!!\nKun il e ya~~",
+   "example1": "헐 어떡해?",
+   "example2": "무슨 일이야?",
+   "example3": "안녕 친구~",
+   "answer": "무슨 일이야?",
+   "soso": "안녕 친구~",
+   "meeting": "길에서 앵무새를 만났다.\n다급해 보인다."
+ },
+ {
+   "question": "Onul kka ji\nzzak mart sale handagu~",
+   "example1": "수리공을 부르는 게 낫지 않을까?",
+   "example2": "하하. 나도 알고 있어.",
+   "example3": "두루마리 휴지 미리 사놔야겠다.",
+   "answer": "두루마리 휴지 미리 사놔야겠다.",
+   "soso": "하하. 나도 알고 있어.",
+   "meeting": "길에서 앵무새를 만났다.\n다급해 보인다."
+ },
+ {
+   "question": "Neoga pilyo han geotdo sada julgae\nif you want!",
+   "example1": "나도 금방 갈 거라 괜찮아~",
+   "example2": "나는 별로 필요 없어.",
+   "example3": "우리 집은 깨끗한 걸.",
+   "answer": "나도 금방 갈 거라 괜찮아~",
+   "soso": "나는 별로 필요 없어.",
+   "meeting": "길에서 앵무새를 만났다.\n다급해 보인다."
+ },
+ {
+   "question": "Yeogi jiyeok language\nneomu aryeoweo…",
+   "example1": "너만 그런 거 아니니까 걱정 마!",
+   "example2": "나도 이사 온 지 얼마 안됐어!",
+   "example3": "글쎄, 나는 여기 오래 살았어서.",
+   "answer": "너만 그런 거 아니니까 걱정 마!",
+   "soso": "글쎄, 나는 여기 오래 살았어서.",
+   "meeting": "길에서 앵무새를 만났다.\n고민이 있는 것 같다."
+ },
+ {
+   "question": "Hakwon en danigi silen girl~",
+   "example1": "아마 귀여운 인형이 좋지 않을까?",
+   "example2": "하하, 그럴 나이지.",
+   "example3": "내 친구 병아리랑 똑같네~",
+   "answer": "내 친구 병아리랑 똑같네~",
+   "soso": "하하, 그럴 나이지.",
+   "meeting": "길에서 앵무새를 만났다.\n고민이 있는 것 같다."
+ },
+ {
+   "question": "Gen chana!\nNanun chocheonjae\njjang-jjang man~~",
+   "example1": "이 정도로 뭘~",
+   "example2": "넌 정말 재미있는 친구구나!",
+   "example3": "힘내! 잘 될 거야.",
+   "answer": "넌 정말 재미있는 친구구나!",
+   "soso": "힘내! 잘 될 거야.",
+   "meeting": "길에서 앵무새를 만났다.\n고민이 있는 것 같다."
+ },
+ {
+   "question": "You odi ga?\nge strange yeabaedang?",
+   "example1": "우리는 신성한 종교라굿!",
+   "example2": "매일 기도드리러 가는 거야.",
+   "example3": "너도 충분히 할 수 있어.",
+   "answer": "매일 기도드리러 가는 거야.",
+   "soso": "우리는 신성한 종교라굿!",
+   "meeting": "예배당 앞에서 앵무새를 만났다.\n호기심 가득한 표정으로 쳐다본다."
+ },
+ {
+   "question": "Nado neoga mo hanun ji gunggums~~",
+   "example1": "너는 종교활동 안해?",
+   "example2": "보여주는 거야 어렵지 않지!",
+   "example3": "같이 일요일마다 가자.",
+   "answer": "보여주는 거야 어렵지 않지!",
+   "soso": "같이 일요일마다 가자.",
+   "meeting": "예배당 앞에서 앵무새를 만났다.\n호기심 가득한 표정으로 쳐다본다."
+ },
+  {
+   "question": "There will be jam!\nYeol sim hi halgae!!",
+   "example1": "다음주 수요일 어때?",
+   "example2": "우리 예배당은 먹을 것도 많이 줘!",
+   "example3": "아주 좋은 자세야ㅎㅎ",
+   "answer": "아주 좋은 자세야ㅎㅎ",
+   "soso": "다음주 수요일 어때?",
+   "meeting": "예배당 앞에서 앵무새를 만났다. 호기심 가득한 표정으로 쳐다본다."
+ },
+  {
+   "question": "Oneul jeomsim\nmwo meng eoss eo?",
+   "example1": "피자! 피자! 피자!\n먹고 싶다...",
+   "example2": "난 아직 못 먹었지,,,",
+   "example3": "우리 예배당가서 먹을래?",
+   "answer": "난 아직 못 먹었지,,,",
+   "soso": "피자! 피자! 피자!\n먹고 싶다...",
+   "meeting": "길에서 앵무새를 만났다.\n배고파 보이는 표정이다."
+ },
+ {
+   "question": "Geuleom mwo meng eullae?",
+   "example1": "난 피곤해서 이제 갈래.",
+   "example2": "이 앞에 파스타집은 어때?",
+   "example3": "나 화장실 좀,,",
+   "answer": "이 앞에 파스타집은 어때?",
+   "soso": "난 피곤해서 이제 갈래.",
+   "meeting": "길에서 앵무새를 만났다.\n 배고파 보이는 표정이다."
+ },
+ {
+   "question": "Dessert do mengja!!!",
+   "example1": "휴,, 너무 덥다~~",
+   "example2": "배 터질거 같아서 싫어!",
+   "example3": "그래! 커피 한잔 콜?",
+   "answer": "그래! 커피 한잔 콜?",
+   "soso": "배 터질거 같아서 싫어!",
+   "meeting": "길에서 앵무새를 만났다.\n 배고파 보이는 표정이다."
+ },
+ {
+   "question": "Travel kkeut!!!\nPresent sawasseo~",
+   "example1": "헉!! 너무 고마워~~",
+   "example2": "흠.. 난 좀 까다로운 편인데..",
+   "example3": "여행? 완전 좋지~!",
+   "answer": "헉!! 너무 고마워~~",
+   "soso": "흠.. 난 좀 까다로운 편인데..",
+   "meeting": "앵무새를 만났다.\n즐거운 표정으로 반겨준다."
+ },
+ {
+   "question": "Pictures~\njom bollae?",
+   "example1": "오홍홍.. 오홍홍..",
+   "example2": "우와! 멋있다!",
+   "example3": "조금만 보여줘~",
+   "answer": "우와! 멋있다!",
+   "soso": "조금만 보여줘~",
+   "meeting": "앵무새가 즐거운 표정으로 반겨준다."
+ },
+ {
+   "question": "Na neomu Pigons pigons~\nNa ije galge",
+   "example1": "그러든지 말든지.",
+   "example2": "잘가! 고마워 오늘!",
+   "example3": "하.. 난 배고파..",
+   "answer": "잘가! 고마워 오늘!",
+   "soso": "그러든지 말든지.",
+   "meeting": "앵무새가 즐거운 표정으로 반겨준다."
+ },
+ {
+   "question": "Hu...\nneomu neomu difficult...TT",
+   "example1": "무슨 일인데??",
+   "example2": "어려울 게 있을까?",
+   "example3": "난 쉬운데 헤헤...",
+   "answer": "무슨 일인데??",
+   "soso": "어려울 게 있을까?",
+   "meeting": "걸어가다 앵무새를 만났다.\n걱정이 많은 표정이다."
+ },
+ {
+   "question": "Chinguga siheom\ndung-mang haeseo wilohalyeogo..",
+   "example1": "굳이...?",
+   "example2": "술 한잔...?",
+   "example3": "음.. 그냥 같이 있어줘.",
+   "answer": "음.. 그냥 같이 있어줘.",
+   "soso": "술 한잔...?",
+   "meeting": "걸어가다 앵무새를 만났다.\n 걱정이 많은 표정이다."
+ },
+ {
+   "question": "Nae\nheart apeuda!\napa!",
+   "example1": "다 괜찮을 거야!!",
+   "example2": "그런 니가 좋아~",
+   "example3": "ㅎ~그래? 왜지?",
+   "answer": "다 괜찮을 거야!!",
+   "soso": "그런 니가 좋아~",
+   "meeting": "걸어가다 앵무새를 만났다.\n 걱정이 많은 표정이다."
+ },
+ {
+   "question": "Wow! Olaenman!!\nJal jinaesseo?",
+   "example1": "응! 당연하지! 너는??",
+   "example2": "난 요즘 너무 졸리더라..",
+   "example3": "잘은 아니고 그냥 지냈지...",
+   "answer": "응! 당연하지! 너는??",
+   "soso": "잘은 아니고 그냥 지냈지...",
+   "meeting": "앵무새 집 근처에서\n앵무새를 발견했다.\n분주하게 움직이고 있다."
+ },
+ {
+   "question": "Nan naeil yeohaeng gaseo\njim ssaneun jung!",
+   "example1": "또 가는 거야? 돈도 많다..",
+   "example2": "우와! 어디로 가는데?",
+   "example3": "난 방콕중인데!ㅜㅜ",
+   "answer": "우와! 어디로 가는데?",
+   "soso": "또 가는 거야? 돈도 많다..",
+   "meeting": "앵무새 집 근처에서 앵무새를 발견했다.\n 분주하게 움직이고 있다."
+ },
+ {
+   "question": "Korea-e saedeul I manhdae!",
+   "example1": "발 너무 아프겠다..",
+   "example2": "다음에는 우리 예배당에서 캠프가자!",
+   "example3": "그래? 친구 많이 사귀겠다!",
+   "answer": "그래? 친구 많이 사귀겠다!",
+   "soso": "다음에는 우리 예배당에서 캠프가자!",
+   "meeting": "앵무새 집 근처에서 앵무새를 발견했다.\n 분주하게 움직이고 있다."
+ },
+ {
+   "question": "Oh! Hello!\nNeodo book ilgeuleo wasseo?",
+   "example1": "고민중이야! 뭐할지..",
+   "example2": "아니! 라면 먹으러 왔어!",
+   "example3": "응.. 종교활동 보충 공부 좀 하려고!",
+   "answer": "응.. 종교활동 보충 공부 좀 하려고!",
+   "soso": "아니! 라면 먹으러 왔어!",
+   "meeting": "동네 책방에서\n책을 읽는 앵무새를 발견했다."
+ },
+ {
+   "question": "Nan book bomyeonseo\ngyehoeg seuneun jung inde!",
+   "example1": "오호! 부지런하다!",
+   "example2": "역시 계획 먼저 세우는 구나~~",
+   "example3": "우리 예배당으로 오는 건 어때?",
+   "answer": "역시 계획 먼저 세우는 구나~~",
+   "soso": "우리 예배당으로 오는 건 어때?",
+   "meeting": "동네 책방에서 책을 읽는 앵무새를 발견했다."
+ },
+ {
+   "question": "Gati chaek ilgdaga gaja!!",
+   "example1": "미안.. 내가 좀 바빠서..",
+   "example2": "난 책 읽는 거 싫어.",
+   "example3": "휴,, 외롭다..",
+   "answer": "미안.. 내가 좀 바빠서..",
+   "soso": "난 책 읽는 거 싫어.",
+   "meeting": "동네 책방에서 책을 읽는 앵무새를 발견했다."
+ },
+ {
+   "question": "Kkachiya~~\nnae party e ollae?",
+   "example1": "언제 하는데? 어디서?",
+   "example2": "요즘 너무 바쁘다..흑.흑..",
+   "example3": "고민 좀 해보고~",
+   "answer": "언제 하는데? 어디서?",
+   "soso": "고민 좀 해보고~",
+   "meeting": "마트에서 장보고 있는 앵무새를 만났다.\n장바구니에는 파티용품이 가득이다."
+ },
+ {
+   "question": "Naljjaneun Saturday~~\njangsoneun mijeong~~",
+   "example1": "우리 예배당에서 하는 건 어때?",
+   "example2": "아직도 못 정했니!! 에휴",
+   "example3": "드라마 볼 시간이다! 안뇽",
+   "answer": "우리 예배당에서 하는 건 어때?",
+   "soso": "아직도 못 정했니!! 에휴",
+   "meeting": "마트에서 장보고 있는 앵무새를 만났다.\n 장바구니에는 파티용품이 가득이다."
+ },
+ {
+   "question": "Party eseo boja!!!\nNeodo chingu lang wa!!",
+   "example1": "난 친구없어.. 놀리는 거야?",
+   "example2": "그래! 예배당 새들이랑 갈게!",
+   "example3": "그날 시간이 안될 거 같아...",
+   "answer": "그래! 예배당 새들이랑 갈게!",
+   "soso": "그날 시간이 안될 거 같아...",
+   "meeting": "마트에서 장보고 있는 앵무새를 만났다.\n 장바구니에는 파티용품이 가득이다."
+ },
+ {
+   "question": "Kkachi...\nHello...\nannyeong...",
+   "example1": " 응 안녕.. 난 갈게",
+   "example2": "안녕~ 근데 무슨 일 있어?",
+   "example3": "너 힘이 없어 보인다~",
+   "answer": "안녕~ 근데 무슨 일 있어?",
+   "soso": "너 힘이 없어 보인다~",
+   "meeting": "시무룩해 보이는 앵무새를 만났다."
+ },
+ {
+   "question": "yeohaeng jung e camera ga\ngojang I naseo sogsang…sogsang…",
+   "example1": " 우리 예배당에 오면 새 거 줄게!",
+   "example2": "A/S 센터에 가봐!",
+   "example3": "나도 카메라 샀는데!! 히히~",
+   "answer": "A/S 센터에 가봐!",
+   "soso": " 우리 예배당에 오면 새 거 줄게!",
+   "meeting": "시무룩해 보이는 앵무새를 만났다."
+ },
+ {
+   "question": "A/S haebogo andoemyeon\nnew camera sayaji..",
+   "example1": "그냥 핸드폰으로 찍지 그래?",
+   "example2": "고쳐질 거야! 걱정마!",
+   "example3": "새 거 사면 나도 보여줘~",
+   "answer": "고쳐질 거야! 걱정마!",
+   "soso": "새 거 사면 나도 보여줘~",
+   "meeting": "시무룩해 보이는 앵무새를 만났다."
+ },
+ {
+   "question": "Oh! Kkachi!\nGonghang eneun museun iliya???",
+   "example1": "햄버거가 너무 먹고 싶어서…",
+   "example2": "너 보러 왔지!",
+   "example3": "피곤해 보이네~ 집 가자",
+   "answer": "너 보러 왔지!",
+   "soso": "피곤해 보이네~ 집 가자",
+   "meeting": "공항에서 앵무새를 발견했다.\n매우 지친 모습이다."
+ },
+ {
+   "question": "ppalli jib gaseo swillae…\n neomu jollyeo…",
+   "example1": "예배당으로 가는 건 어때?",
+   "example2": "그래그래 너희 집으로 가자~",
+   "example3": "짐은 니가 스스로 들어!",
+   "answer": "그래그래 너희 집으로 가자~",
+   "soso": "예배당으로 가는 건 어때?",
+   "meeting": "공항에서 앵무새를 발견했다.\n 매우 지친 모습이다."
+ },
+ {
+   "question": "yeogsi yeohaeng eun\nhimdeulgo jaemisseo! Kkk",
+   "example1": "다음에는 나랑 가자!",
+   "example2": "돈 많이 들지 않아?",
+   "example3": "ㅎㅎ 친구도 많이 사귈 수 있지!",
+   "answer": "다음에는 나랑 가자!",
+   "soso": "ㅎㅎ 친구도 많이 사귈 수 있지!",
+   "meeting": "공항에서 앵무새를 발견했다.\n 매우 지친 모습이다."
+ },
+ {
+   "question": "neodo yeonghwa boleo ongeoya??",
+   "example1": "응! 새로운 영화가 나왔대!",
+   "example2": "그냥 동네 산책 중인데?",
+   "example3": "팝콘 하나만 사줘~",
+   "answer": "응! 새로운 영화가 나왔대!",
+   "soso": "그냥 동네 산책 중인데?",
+   "meeting": "친구들과 영화를 보러온\n앵무새를 만났다."
+ },
+ {
+   "question": "What movie johahae?\n Nan action joha!",
+   "example1": "난 콜라가 더 좋아~",
+   "example2": "드라마를 더 많이 봐.",
+   "example3": "음.. 뮤지컬영화가 취향이야~",
+   "answer": "음.. 뮤지컬영화가 취향이야~",
+   "soso": "드라마를 더 많이 봐.",
+   "meeting": "친구들과 영화를 보러온 앵무새를 만났다."
+ },
+ {
+   "question": "yeonghwa god sijag ine~\nna galge! Daum ebwa!",
+   "example1": "영화 잘봐~! 후기 알려줘!",
+   "example2": "운동 좀 해야겠다..",
+   "example3": "다음에 예배당에서도 영화보자~",
+   "answer": "영화 잘봐~! 후기 알려줘!",
+   "soso": "다음에 예배당에서도 영화보자~",
+   "meeting": "친구들과 영화를 보러온 앵무새를 만났다."
+ },
+ {
+   "question": "Oh! Eoseooseyo!\nEo?? Kkachine?",
+   "example1": "으잉? 여기서 뭐해?",
+   "example2": "유니폼 잘 어울리네~",
+   "example3": "어.. 난 쇼핑중인데?",
+   "answer": "으잉? 여기서 뭐해?",
+   "soso": "어.. 난 쇼핑중인데?",
+   "meeting": "옷가게에 갔다가\n알바하는 앵무새를 발견했다."
+ },
+ {
+   "question": "Don beollyeogo aleubaiteu jung iya~~",
+   "example1": "피팅 룸이 어디야?",
+   "example2": "아하! 하긴 여행을 좋아하니까!",
+   "example3": "몇 시까지 해?",
+   "answer": "아하! 하긴 여행을 좋아하니까!",
+   "soso": "몇 시까지 해?",
+   "meeting": "옷가게에 갔다가 알바하는 앵무새를 발견했다."
+ },
+ {
+   "question": "igeo sale haneunde I os eun eottae??",
+   "example1": "ㅎㅎㅎ화이팅 나는 갈래~",
+   "example2": "좋아보인다! 한 번 입어볼래!",
+   "example3": "이건 내 취향이 아니야..",
+   "answer": "좋아보인다! 한 번 입어볼래!",
+   "soso": "이건 내 취향이 아니야..",
+   "meeting": "옷가게에 갔다가 알바하는 앵무새를 발견했다."
+ }
+]
+}

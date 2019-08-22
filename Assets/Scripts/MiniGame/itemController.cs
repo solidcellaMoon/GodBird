@@ -25,7 +25,6 @@ public class itemController : MonoBehaviour
             if(itemType == 0) scoreManager.beanScore += 1;
             if(itemType == 1) scoreManager.diceScore += 1;
             if(itemType == 2) lifeManager.lifeNum += 1;
-            
             Destroy(gameObject);
     }
 }

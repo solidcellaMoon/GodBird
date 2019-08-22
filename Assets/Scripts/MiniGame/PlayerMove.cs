@@ -10,8 +10,8 @@ public class PlayerMove : MonoBehaviour
     public static bool unBeatTime = false;
     public bool inputUp = false;
     public bool inputDown = false;
-    public int retryNum;
-    public static float distanceY;
+    public static float distanceY = 0;
+    public AudioSource itemBgm, crashBgm;
     Vector3 initPos;
 
 
@@ -22,10 +22,14 @@ public class PlayerMove : MonoBehaviour
 
     void Update () {
         //키보드 조작용
-        distanceY = Input.GetAxis("Vertical") * 0.8f;
+        //distanceY = Input.GetAxis("Vertical");
+        distanceY = 0;
+        if(Input.GetKey("up")) distanceY = 0.7f;
+        else if (Input.GetKey("down")) distanceY = -0.7f;
+
         // 상하 이동
-        if(inputUp)  distanceY += 0.5f;
-        else if(inputDown) distanceY =- 0.5f;
+        if(inputUp)  distanceY += 0.7f;
+        else if(inputDown) distanceY =- 0.7f;
         //else if (!inputUp && !inputDown) distanceY = 0;
         distanceY *= Time.deltaTime * 8;
         transform.Translate(0,distanceY,0);
@@ -42,11 +46,16 @@ public class PlayerMove : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision){
 
         if(!superTime && !unBeatTime) {
+        crashBgm.Play();
         lifeManager.lifeNum--;
         unBeatTime = true;
         StartCoroutine(UnBeatTime());
         }
         
+    }
+
+    void OnCollisionEnter2D(Collision2D collision){
+        itemBgm.Play();
     }
 
 

@@ -39,4 +39,9 @@ public class buttonManager : MonoBehaviour
         dashScript.inputDashUp = true;
     }
 
+    void Update(){
+        if(Input.GetKeyDown("space")) DashPressed();
+        if(Input.GetKeyUp("space")) DashOff();
+    }
+
 }
