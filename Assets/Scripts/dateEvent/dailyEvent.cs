@@ -23,8 +23,8 @@ public class dailyEvent : MonoBehaviour
 
 
         itemManager.birdNum += chBuff*npcBuff;
-
-        eventSelect();
+        eventTxt.text = "드디어 시작합니다."; content.text = "";
+        if(dateManager.dateNum != 0) eventSelect();
 
 
     }
@@ -36,7 +36,7 @@ public class dailyEvent : MonoBehaviour
     }
 
     void eventSelect(){
-        int eventNum = Random.Range(0,160);
+        int eventNum = Random.Range(0,960);
 
         eventTxt.text = "오늘도 평온합니다."; content.text = "";
 
@@ -47,30 +47,34 @@ public class dailyEvent : MonoBehaviour
             itemManager.beanNum += itemManager.birdNum;
         } 
         else if(dateNum == 6){ // 일요일 이벤트
-            eventTxt.text = "오늘은 교회 유지비를\n내는 날입니다.";
-            content.text = "교회 증축을 위해\n콩을 납부해주세요.";
+            eventTxt.text = "오늘은 예배당 유지비를\n내는 날입니다.";
+            content.text = "증축을 위해\n콩을 납부해주세요.";
         } 
-        else if (eventNum > 100) { 
+        else if (eventNum > 700) { 
 
-            if(eventNum < 120 && itemManager.beanNum >= 100){ // 몰수 이벤트
+            if(eventNum < 750 && itemManager.beanNum >= 100){ // 몰수 이벤트
+                int rand = Random.Range(50, 2 + itemManager.beanNum/2);
                 eventTxt.text = "자금을 도둑 맞았습니다.";
-                content.text = "50콩이 사라졌습니다.";
-                itemManager.beanNum -= 50;
+                content.text = rand.ToString() + "콩이 사라졌습니다.";
+                itemManager.beanNum -= rand;
             }
-            else if (eventNum < 140){ // 콩 입수 이벤트
+            else if (eventNum < 850){ // 콩 입수 이벤트
+                int rand = Random.Range(50, 301);
                 eventTxt.text = "기부금액이 들어왔습니다.";
-                content.text = "50콩을 얻었습니다.";
-                itemManager.beanNum += 50;
+                content.text = rand.ToString() + "콩을 얻었습니다.";
+                itemManager.beanNum += rand;
             }
-            else if (eventNum < 140 && itemManager.birdNum >= 30 ){ // 신자 감소
+            else if (eventNum < 950 && itemManager.birdNum >= 4 ){ // 신자 감소
+                int rand = Random.Range(1, (int) itemManager.birdNum/2);
                 eventTxt.text = "유언비어로 인해\n안좋은 소문이 퍼졌습니다.";
-                content.text = "30명의 신도가 사라졌습니다.";
-                itemManager.birdNum -= 30;
+                content.text = rand.ToString() + "마리의 신도가 사라졌습니다.";
+                itemManager.birdNum -= rand;
             }
-            else if (eventNum < 160 ){ // 신자 증가
+            else if (eventNum < 960 ){ // 신자 증가
+                int rand = Random.Range(1, (int) itemManager.birdNum/3);
                 eventTxt.text = "당신의 신앙에\n많은 새들이 감동받았습니다.";
-                content.text = "30명의 신도가 들어왔습니다.";
-                itemManager.birdNum += 30;
+                content.text = rand.ToString() + "마리의 신도가 들어왔습니다.";
+                itemManager.birdNum += rand;
             }
         }
         

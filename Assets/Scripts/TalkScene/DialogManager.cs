@@ -8,91 +8,54 @@ using System.IO;
 public class DialogManager : MonoBehaviour
 {
     public static bool talkStart = true;
-    string birdName = "crow";
+    string birdName, placeName;
+    string [] lastBird = new string [4];
     int meetingNum;
-    string placeName = "잔디공원";
-
     string[] birdArr = new string[]
     {"crow","chick","pigeon","penguin","parrot","paradise"};
-
     string jsonFile = "Data.json";
- 
-    public GameObject questionText;
-    public GameObject example1Text;
-    public GameObject example2Text;
-    public GameObject example3Text;
-    public GameObject motion;
-    public GameObject touchXXX, touchX;
+    public GameObject questionText,motion;
+    public GameObject example1Text, example2Text, example3Text;
+    public GameObject touchXXX, touchX, touchXX;
     // 전자, 선택한 후 잠시 터치 불가
-    // 후자, 텍스트 출력시 터치 불가
+    // 후자 2개, 텍스트 출력시 터치 불가
 
-    Dictionary<string, string>[] problems = new Dictionary<string, string>[15];
+    // json 파일 범위 지정에 필요
+    Dictionary<string, string>[] problems = new Dictionary<string, string>[46];
 
-    int problemNumber;
-    int problemCount = 0;
+    int problemNumber, problemCount = 0, totalCorrect = 0;
     string question = "";
-    string example1 = "";
-    string example2 = "";
-    string example3 = "";
-    string answer = "";
-    string soso = "";
-    string meeting = "";
+    string example1 = ""; string example2 = ""; string example3 = "";
+    string answer = ""; string soso = "";
+    public GameObject totalCorrectText, correctIncorrectText;
+    public GameObject timeBarImage, placeText;
+    TimeAttackController timeBar;
 
-    int totalCorrect = 0;
-    public GameObject totalCorrectText;
-    public GameObject correctIncorrectText;
-
-    public GameObject gameOverPanel;
-
-    public GameObject timeBarImage;
-
-    public GameObject placeText;
-
-    int index = 0;
-    public static int birdType = 0;
+    int index = 0, birdIndex = 0, lastRand;
     public static bool check = false; // 대답시 트루. 트루면 타임이 멈춤.
     public static bool questEnd = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    public AudioSource talkBgm, clockBgm, goodBgm, sosoBgm, badBgm;
 
     void infoInit(){
+        talkStart = true;
         // 장소 이름
-        placeName = MapManager.map[index].name;
+        placeName = MapManager.map[index].name; WhatBird();
         // 새 종류 지정
         //birdSelect();
         birdName = birdArr[MapManager.birdType];
+        lastBird[birdIndex] = birdName; birdIndex ++;
 
         meetingNum = npcManager.npcEnc[MapManager.birdType];
     }
-/*
-    void birdSelect(){
-        switch(MapChecker.mapOutput[index]){
-            case 0: // 잔디공원
-            birdType = Random.Range(0,2); birdName = birdArr[birdType]; break;
-            case 1: // 바름배움촌
-            birdType = Random.Range(1,3); birdName = birdArr[birdType]; break;
-            case 2: // 회색도심
-            birdType = Random.Range(0,2); if(birdType == 1) birdType = 2; 
-            birdName = birdArr[birdType]; break;
-            case 3: // 야자바다
-            birdType = Random.Range(3,5); birdName = birdArr[birdType]; break;
-            case 4: // 정글숲
-            birdType = Random.Range(4,6); birdName = birdArr[birdType]; break;
-            case 5: // 북극설원
-            birdType = Random.Range(3,5); if(birdType == 3) birdType = 5; 
-            birdName = birdArr[birdType]; break;
-        }
-    }
-*/
+
     void OnEnable(){
-        touchX.SetActive(true);
-        touchXXX.SetActive(false);
-        talkStart = true;
+
+        supervisor.clear = false;
+
+        touchX.SetActive(true); touchXX.SetActive(true); touchXXX.SetActive(false);
         infoInit();
+
         placeText.GetComponent<Text>().text = placeName;
 
         string jsonFilePath = Application.dataPath + "/Resources/BirdDialogue/" + birdName + jsonFile;
@@ -116,56 +79,47 @@ public class DialogManager : MonoBehaviour
                 i++;
             }
         }
-        else
-        {
-            Debug.Log("json file error");
-        }
+        else Debug.Log("json file error");
 
         SetProblemNum();
-        StartCoroutine(printTxt());
-        Invoke("ShowProblem", 2);
-        //ShowProblem();
+        StartCoroutine(printTxt("meeting"));
         totalCorrectText.GetComponent<Text>().text = "호감도: 0";
         correctIncorrectText.GetComponent<Text>().text = "Correct/Incorrect";
     }
 
     void SetProblemNum()
     {
-        if (meetingNum == 0)
-        {
-            problemNumber = 1;
-        }
-        else
-        {
-            int ranNum = Random.Range(1, 5);
+        if (meetingNum == 0) problemNumber = 1;
+        else{
+            // json 파일 범위 지정에 필요
+            int ranNum = Random.Range(1, 15);
+            foreach(string str in lastBird){
+                if(birdName == str){
+                    while(ranNum == lastRand) ranNum = Random.Range(1, 15);
+                }
+            }
             problemNumber = 3 * ranNum + 1;
+            lastRand = ranNum;
         }
     }
 
     void ShowProblem()
     {
+        clockBgm.Play();
         check = false;
         questEnd = true;
-        touchX.SetActive(false);
+        touchX.SetActive(false); touchXX.SetActive(false);
 
-        //question = problems[problemNumber - 1]["question"];
         example1 = "> " + problems[problemNumber - 1]["example1"];
         example2 = "> " + problems[problemNumber - 1]["example2"];
         example3 = "> " + problems[problemNumber - 1]["example3"];
         answer = "> " + problems[problemNumber - 1]["answer"];
         soso = "> " + problems[problemNumber - 1]["soso"];
 
-        TimeAttackController timeBar = timeBarImage.GetComponent<TimeAttackController>();
-        if (timeBar)
-        {
-            timeBar.timeLeft = 3f;
-        }
-        else
-        {
-            Debug.Log("other script object error");
-        }
-
-        //questionText.GetComponent<Text>().text = question;
+        timeBar = timeBarImage.GetComponent<TimeAttackController>();
+        if (timeBar) timeBar.timeLeft = 3f;
+        else Debug.Log("other script object error");
+        
         example1Text.GetComponent<Text>().text = example1;
         example2Text.GetComponent<Text>().text = example2;
         example3Text.GetComponent<Text>().text = example3;
@@ -173,20 +127,24 @@ public class DialogManager : MonoBehaviour
         problemCount++;
     }
 
-    IEnumerator printTxt(){
+    IEnumerator printTxt(string str){
         int i = 0;
-            question = problems[problemNumber - 1]["question"];
-            char[] arr = question.ToCharArray();
+        question = problems[problemNumber - 1][str];
+        char[] arr = question.ToCharArray();
         if(question != null){
             for(i = 0; i < arr.Length; i++){
-            questionText.GetComponent<Text>().text += arr[i];
-            yield return new WaitForSeconds(0.05f);
+            talkBgm.pitch = 1;
+            if(str == "question") talkBgm.pitch = 3;
+            questionText.GetComponent<Text>().text += arr[i]; talkBgm.Play();            
+            yield return new WaitForSeconds(0.06f);
             }
         }
-
-        if (i == arr.Length - 1){
-            yield return null;
-        } 
+        if(str == "meeting") {
+            yield return new WaitForSeconds(1f);
+            questionText.GetComponent<Text>().text = "";
+            StartCoroutine(printTxt("question"));
+        } else Invoke("ShowProblem", 1);
+        
     }
 
     // Update is called once per frame
@@ -198,6 +156,8 @@ public class DialogManager : MonoBehaviour
         if(TimeAttackController.failed && questEnd) {
             TimeAttackController.failed = false;
             motionSelect("오답");
+            badBgm.Play();
+            clockBgm.Pause();
             Invoke("NextOrOverCheck",2);
         }
 
@@ -213,7 +173,7 @@ public class DialogManager : MonoBehaviour
             totalCorrectText.GetComponent<Text>().text = "호감도: " + totalCorrect.ToString();
             correctIncorrectText.GetComponent<Text>().text = "호감도 11 up";
             motionSelect("정답");
-            //StartCoroutine(motionTime("정답", 3f));
+            goodBgm.Play();
 
         }
         else if (soso.Equals(example))
@@ -222,16 +182,16 @@ public class DialogManager : MonoBehaviour
             totalCorrectText.GetComponent<Text>().text = "호감도: " + totalCorrect.ToString();
             correctIncorrectText.GetComponent<Text>().text = "호감도 5 up";
             motionSelect("보통");
-           //StartCoroutine(motionTime("보통", 3f));
+            sosoBgm.Play();
         }
         else
         {
             totalCorrectText.GetComponent<Text>().text = "호감도: " + totalCorrect.ToString();
             correctIncorrectText.GetComponent<Text>().text = "호감도 0 up";
             motionSelect("오답");
-            //StartCoroutine(motionTime("오답", 3f));
+            badBgm.Play();
         }
-        //NextOrOverCheck();
+        clockBgm.Pause();
         Invoke("NextOrOverCheck",2f);
     }
 
@@ -244,29 +204,19 @@ public class DialogManager : MonoBehaviour
         if (problemCount < 3)
         {
             problemNumber++;
-            //questionText.GetComponent<Text>().text = "";
-            touchX.SetActive(true);
+            touchX.SetActive(true); touchXX.SetActive(true);
             example1Text.GetComponent<Text>().text = "";
             example2Text.GetComponent<Text>().text = "";
             example3Text.GetComponent<Text>().text = "";
-            StartCoroutine(printTxt());
-            Invoke("ShowProblem", 2);
+            StartCoroutine(printTxt("question"));
         }
         else
         {
-            questionText.GetComponent<Text>().text = "";
             problemCount = 0;
             npcManager.npcGage[MapManager.birdType] += totalCorrect;
             npcManager.npcEnc[MapManager.birdType]++;
             totalCorrect = 0;
             index ++;
-            //Debug.Log("ShowGameOverBox");
-            //questionText.SetActive(false);
-            //example1Text.SetActive(false);
-            //example2Text.SetActive(false);
-            //example3Text.SetActive(false);
-            //timeBarImage.SetActive(false);
-            //gameOverPanel.SetActive(true);
             talkStart = false;
         }
     }
@@ -289,14 +239,21 @@ public class DialogManager : MonoBehaviour
         SelectExample(example3);
     }
 
-    IEnumerator motionTime(float time){
-        yield return new WaitForSeconds(time);
-    }
-
     public void motionSelect(string type){
         check = true;
         motion.SetActive(true);
         motionController.name = type;
+    }
+
+        void WhatBird(){
+        switch(npcManager.npcGage[MapManager.birdType]){
+            case 0: supervisor.str = "까마귀는"; break;
+            case 1: supervisor.str = "병아리는"; break;
+            case 2: supervisor.str = "비둘기 노부부는"; break;
+            case 3: supervisor.str = "펭귄"; break;
+            case 4: supervisor.str = "앵무새는"; break;
+            case 5: supervisor.str = "어깨걸이 극락조는"; break;
+        }
     }
 
 }

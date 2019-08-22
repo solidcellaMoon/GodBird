@@ -7,6 +7,7 @@ public class startScirpt : MonoBehaviour
 {
     public GameObject startUI;
     public GameObject Manager, Player, Generator;
+    public AudioSource countBgm;
     Vector3 initPos = new Vector3 (-2.62f,0,0);
     float moveSpeed = 6f;
     public Text uiText;
@@ -49,6 +50,7 @@ public class startScirpt : MonoBehaviour
                 Generator.SetActive(true);
             }
             countTime--;
+            countBgm.Play();
             yield return new WaitForSeconds(1f);
         }
 

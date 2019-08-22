@@ -10,7 +10,7 @@ public class panelScript : MonoBehaviour
     public void scsPanelClose(){
 
         if(successEvent.isClear) //빚을 갚은 상태일 때
-        switch (dateManager.weekNum + 1) {
+        switch (successEvent.ClearNum) {
             case 1: case 3: case 6: case 11: //레벨업하는 주차
             scsPanel.SetActive(false); // 성공여부 팝업을 닫고
             lvUpPanel.SetActive(true); // 레벨업 팝업을 오픈

@@ -14,7 +14,7 @@ public class MapManager : MonoBehaviour
     public Transform endPoint;
     public static bool check = false; // ?
     public static int index = 0; // 배열 확인용인듯 함
-    public GameObject npcPos;
+    public GameObject npcPos, gameEnd;
     int cnt = 0;
 
     public GameObject Canvas, DialManager;
@@ -23,6 +23,7 @@ public class MapManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        check = false;
         for(int i = 0; i < 4; i++){
             //map[i] = GameObject.Find("바름배움촌");
             map[i] = GameObject.Find(RandomCourse.placeNow[i].name);
@@ -97,11 +98,17 @@ public class MapManager : MonoBehaviour
         }
 
         if(check){
-            check = false;
+            //check = false;
             index = 0;
-            SceneManager.LoadScene("eventScene");
+            gameEnd.SetActive(true);
+            Invoke("sceneLoad", 3);
+            //SceneManager.LoadScene("eventScene");
         }
 
+    }
+    
+    void sceneLoad(){
+        SceneManager.LoadScene("eventScene");
     }
     void birdSelect(){
         switch(MapChecker.mapOutput[index]){

@@ -145,3 +145,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 1
   speed: 7
+  bgm: {fileID: 8108617632442310094, guid: c1e8c15e5e6a167459c9a904b7833cc3, type: 3}

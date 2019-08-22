@@ -33,11 +33,11 @@ public class RandomCourse : MonoBehaviour
     private placeInfo[] placeList = new placeInfo[]
     {
         new placeInfo("잔디공원",0,1),
-        new placeInfo("바름배움촌",10,2),
-        new placeInfo("회색도심",20,3),
-        new placeInfo("야자바다",30,4),
-        new placeInfo("정글숲",40,5),
-        new placeInfo("북극설원",50,6)
+        new placeInfo("바름배움촌",10 + 10*(dateManager.weekNum),2), // 10%
+        new placeInfo("회색도심",25 + 10*(dateManager.weekNum),3), // 25%
+        new placeInfo("야자바다",50 + 65*(dateManager.weekNum),4), // 50%
+        new placeInfo("정글숲",60 + 70*(dateManager.weekNum),5), // 60%
+        new placeInfo("북극설원",80 + 100*(dateManager.weekNum),6) // 80%
     };
     //현재 뽑힌 장소 정보 리스트(계속 갱신)
     public static placeInfo[] placeNow = new placeInfo[4];

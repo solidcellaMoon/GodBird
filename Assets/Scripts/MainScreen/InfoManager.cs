@@ -27,7 +27,7 @@ public class InfoManager : MonoBehaviour
 
         if(type != -1 && !npcManager.npcList[type]) {
             nameTxt.text = "???";
-            infoTxt.text = "";
+            infoTxt.text = "전도에 성공하면\n자세한 프로필이 오픈됩니다.";
         }
 
     }

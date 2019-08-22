@@ -8,6 +8,11 @@ public class SceneChange : MonoBehaviour
 {
     public GameObject[] panel = new GameObject [2];
     public GameObject touchXXX;
+    public bool isFull = false;
+
+    public void ChangeToIntro(){
+        SceneManager.LoadScene("IntroScene");
+    }
 
     public void ChangeToMiniGame(){
         if(dateManager.gameRetry > 0) SceneManager.LoadScene("MiniGame");
@@ -86,17 +91,28 @@ public class SceneChange : MonoBehaviour
         if(panel[i].activeSelf) panel[i].SetActive(false);
     }
 
+    public void ExitGame(){
+        Application.Quit();
+    }
+
+    public void ScreenSize(){
+        if(isFull) isFull = false;
+        else isFull = true;
+        Screen.SetResolution(450,800,isFull);
+    }
+
 
     // Start is called before the first frame update
     void Start()
     {
+        if(SceneManager.GetActiveScene().name == "IntroScene"){
         Screen.SetResolution(450,800,false);
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = 60; }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

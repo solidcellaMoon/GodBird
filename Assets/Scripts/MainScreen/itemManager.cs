@@ -9,12 +9,37 @@ public class itemManager : MonoBehaviour
     // 기본 자금 100콩, 주사위 5개
     public static int birdNum = 0;
     // 기본 신도수 0명
-    
-    public Text scoreText, birdText;
+    public static int debtNum;
+    int debtRand;
+
+    public Text scoreText, birdText, debtInfo;
 
     // Start is called before the first frame update
     void Start()
     {
+        if(beanNum < 0) beanNum = 0;
+        if(diceNum < 0) diceNum = 0;
+        if(birdNum < 0) birdNum = 0;
+
+        if(dateManager.weekNum == 0) debtRand = 50;
+
+        if(dateManager.weekNum > 0 && dateManager.dateNum % 7 == 0)
+        debtRand = Random.Range(50,101);
+
+        debtNum = 100 + debtRand * (dateManager.weekNum + 1);
+        
+        if(dateManager.weekNum == 0){
+            debtInfo.text = "이번 주의\n유지보수 비용\n\n" + "150 콩";
+        } else{
+            if(successEvent.isClear)
+            debtInfo.text = "이번 주의\n유지보수 비용\n\n" 
+            + debtNum.ToString() + " 콩";
+            else
+            debtInfo.text = "이번 주의\n유지보수 비용\n\n"
+            + (debtNum + debtManager.debt).ToString() + " 콩";
+        }
+
+
     }
 
     // Update is called once per frame
@@ -22,6 +47,6 @@ public class itemManager : MonoBehaviour
     {
         scoreText.text = ": " + beanNum.ToString()
                         +"\n: " + diceNum.ToString();
-        birdText.text = "신도: " + birdNum.ToString();
+        birdText.text = "신도: " + birdNum.ToString()+" 마리";
     }
 }

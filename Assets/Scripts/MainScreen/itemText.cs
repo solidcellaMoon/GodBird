@@ -13,6 +13,7 @@ public class itemText : MonoBehaviour
     {
         beanInfo.text = ": " + itemManager.beanNum.ToString();
         diceInfo.text = ": " + itemManager.diceNum.ToString();
+
     }
 
     // Update is called once per frame
