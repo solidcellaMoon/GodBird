@@ -9,8 +9,8 @@ public class itemManager : MonoBehaviour
     // 기본 자금 100콩, 주사위 5개
     public static int birdNum = 0;
     // 기본 신도수 0명
-    public static int debtNum;
-    int debtRand;
+    public static int debtNum = 100;
+    int debtRand = 50;
 
     public Text scoreText, birdText, debtInfo;
 
@@ -21,15 +21,15 @@ public class itemManager : MonoBehaviour
         if(diceNum < 0) diceNum = 0;
         if(birdNum < 0) birdNum = 0;
 
-        if(dateManager.weekNum == 0) debtRand = 50;
-
-        if(dateManager.weekNum > 0 && dateManager.dateNum % 7 == 0)
-        debtRand = Random.Range(50,101);
-
-        debtNum = 100 + debtRand * (dateManager.weekNum + 1);
+        if(dateManager.weekNum == 0) debtNum = 150;
+        else if(dateManager.dateNum % 7 == 0) {
+            debtRand = Random.Range(50,101);
+            debtNum = debtRand + 100 * (dateManager.weekNum + 1);
+        }
+        //debtNum = 100 + debtRand * (dateManager.weekNum + 1);
         
         if(dateManager.weekNum == 0){
-            debtInfo.text = "이번 주의\n유지보수 비용\n\n" + "150 콩";
+            debtInfo.text = "이번 주의\n유지보수 비용\n\n" + debtNum.ToString() + " 콩";
         } else{
             if(successEvent.isClear)
             debtInfo.text = "이번 주의\n유지보수 비용\n\n" 
