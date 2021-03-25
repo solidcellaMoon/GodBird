@@ -12,7 +12,7 @@ public class churchText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        chLevel = churchManager.chLevel;
+        chLevel = churchManager.chLevel + 1;
         chLv = "Lv." + chLevel.ToString();
 
         switch(chLevel){
