@@ -18,7 +18,7 @@ public class textManager : MonoBehaviour
     void Update()
     {   
         dateCalc();
-        int weekNum = dateManager.dateNum / 7;
+        int weekNum = (dateManager.dateNum / 7) + 1;
         weekText.text = weekNum.ToString() + "주차";
         if(countTime == 2) { Destroy(gameObject);}
     }

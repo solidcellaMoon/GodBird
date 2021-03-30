@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class textPrint : MonoBehaviour
 {
     public string text;
+    public GameObject nextButton;
     public AudioSource talkBgm;
 
     // Start is called before the first frame update
     void Start()
     {
+        nextButton.SetActive(false);
         gameObject.GetComponent<Text>().text = "";
         if(text != "") StartCoroutine(printTxt(text));
     }
@@ -25,6 +27,7 @@ public class textPrint : MonoBehaviour
             else {gameObject.GetComponent<Text>().text += arr[i]; talkBgm.Play();}
         }
         // 프린트가 끝난 후
+        nextButton.SetActive(true);
     }
 
     // Update is called once per frame

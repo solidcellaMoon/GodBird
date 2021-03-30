@@ -19,10 +19,10 @@ public class dateManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(dateNum % 7 == 6) gameRetry = 3; // 일요일이면 미니게임 횟수 리셋
+        if(dateNum % 7 == 0) gameRetry = gameManager.gameRetry; // 월요일이면 미니게임 횟수 리셋
         dateCalc();
         //weekNum = dateNum / 7;
-        uiText.text = weekNum.ToString() + "\n" + date;
+        uiText.text = (weekNum+1).ToString() + "\n" + date;
     }
 
     // Update is called once per frame
