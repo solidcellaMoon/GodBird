@@ -32,7 +32,7 @@ public class PlayerMove : MonoBehaviour
         distanceY *= Time.deltaTime * 8;
         transform.Translate(0,distanceY,0);
 
-        moveRange(); // 플레이어 화면 이탈 방지
+        moveRange(); // 플레이어 화면 이탈 방지 (이거 지우면안됨)
         distanceY = 0; // y축 거리 초기화
     }
 
