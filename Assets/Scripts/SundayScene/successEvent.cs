@@ -11,7 +11,7 @@ public class successEvent : MonoBehaviour
     public static int ClearNum = 0;
     public AudioSource good, bad;
 
-    int cnt = 0;
+    int failCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -32,12 +32,12 @@ public class successEvent : MonoBehaviour
             bad.Play();
             // 첫번째 실패 -> 신도수 30% 감소
             // 그 이후 실패 -> 게임 오버 (아직 미구현)
-            isClear = false; cnt ++;
+            isClear = false; failCount ++;
         }
     }
 
     void Update(){
-        if(cnt == 2) GameOver.SetActive(true);
+        if(failCount == 2) GameOver.SetActive(true);
     }
 
     public void GameOverClose(){

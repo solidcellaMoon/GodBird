@@ -655,7 +655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &133513971
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1116,6 +1116,7 @@ MonoBehaviour:
   text: "\uB09C \uC55E\uC73C\uB85C/\uADF8 \uBD84\uC758 \uB9D0\uC500\uC744 \uB110\uB9AC
     \uC54C\uB9AC\uACE0,//\uB9CE\uC740 \uC774\uB4E4\uC758 \uBBFF\uC74C\uC73C\uB85C/\uC2E0\uAED8
     \uBCF4\uB2F5\uD558\uACA0\uC5B4. "
+  nextButton: {fileID: 108982852}
   talkBgm: {fileID: 357495405}
 --- !u!114 &357495403
 MonoBehaviour:
@@ -1365,6 +1366,7 @@ MonoBehaviour:
   text: "\uD615\uD0DC\uB97C \uC54C \uC218 \uC5C6\uB294 \uC790\uAC00 \uC608\uC5B8\uC744
     \uD558\uB354\uB2C8/ \uC5C4\uCCAD \uBC1D\uC740 \uBE5B\uC774 \uB0B4 \uBAB8\uC744
     \uAC10\uC30C\uC5B4\u2026"
+  nextButton: {fileID: 108982852}
   talkBgm: {fileID: 397543258}
 --- !u!114 &397543256
 MonoBehaviour:
@@ -2002,6 +2004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: "\uBB50, \uBB50\uC9C0!?/ \uBC29\uAE08 \uADF8 \uAFC8\uC740..."
+  nextButton: {fileID: 108982852}
   talkBgm: {fileID: 717538061}
 --- !u!114 &717538059
 MonoBehaviour:
@@ -2301,6 +2304,7 @@ MonoBehaviour:
     \uADF8\uB807\uAD70! \uC774\uAC74 \uBD84\uBA85 \uC2E0\uC758 \uACC4\uC2DC\uC57C!//
     \uC804\uC9C0\uC804\uB2A5\uD558\uC2E0 \uADF8 \uBD84\uC744 \uBBFF\uC73C\uBA74/
     \uC138\uC0C1\uC5D0 \uD3C9\uD654\uAC00 \uCC3E\uC544\uC62C \uAC70\uB77C\uB294 \uAC83\uC774\uAD70. "
+  nextButton: {fileID: 108982852}
   talkBgm: {fileID: 769888082}
 --- !u!114 &769888080
 MonoBehaviour:
@@ -2528,13 +2532,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD074\uB9AD\uD558\uC5EC \uC9C4\uD589\uD558\uC138\uC694."
+  m_Text: "\uD130\uCE58\uD558\uC5EC \uC9C4\uD589\uD558\uC138\uC694"
 --- !u!222 &830781687
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3167,6 +3171,7 @@ MonoBehaviour:
     B1607-2...///\uC9F9\uC9F9\uB9C8\uC744\uC5D0 \uC0AC\uB294/ \uD3C9\uBC94\uD55C
     \uC870\uB958 \uC2DC\uBBFC \uAE4C\uCE58\uB294/ \uC5B4\uB290 \uB0A0 \uAFC8\uC744
     \uAFBC\uB2E4. "
+  nextButton: {fileID: 133513970}
   talkBgm: {fileID: 1374072889}
 --- !u!82 &1374072889
 AudioSource:
@@ -3317,6 +3322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "\uBE68\uB9AC \uB9C8\uC744\uC758 \uC0C8\uB4E4\uACFC/\uADF8 \uBD84\uC758 \uC774\uC57C\uAE30\uB97C
     \uB098\uB204\uACE0 \uC2F6\uB2E4. "
+  nextButton: {fileID: 108982852}
   talkBgm: {fileID: 1399771971}
 --- !u!114 &1399771969
 MonoBehaviour:
@@ -4866,6 +4872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: "\uBE5B\uC774 \uC788\uC73C\uB9AC\uB77C...!"
+  nextButton: {fileID: 2737612}
   talkBgm: {fileID: 2037837386}
 --- !u!114 &2037837384
 MonoBehaviour:
