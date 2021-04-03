@@ -25,12 +25,15 @@ public class itemManager : MonoBehaviour
         else if(dateManager.dateNum % 7 == 0) {
             debtRand = Random.Range(50,101);
             debtNum = debtRand + 100 * (dateManager.weekNum + 1);
-            if(!successEvent.isClear) debtNum += debtManager.debt;
+         
+            if (!successEvent.isClear) debtNum += debtManager.debt;
         }
         //debtNum = 100 + debtRand * (dateManager.weekNum + 1);
 
         debtInfo.text = "이번 주의\n유지보수 비용\n\n" + debtNum.ToString() + " 콩";
+
         
+
         // if(dateManager.weekNum == 0){
         //     debtInfo.text = "이번 주의\n유지보수 비용\n\n" + debtNum.ToString() + " 콩";
         // } else{

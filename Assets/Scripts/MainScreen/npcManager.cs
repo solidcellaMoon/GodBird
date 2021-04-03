@@ -27,7 +27,7 @@ public class npcManager : MonoBehaviour
                     // 알림창을 띄우고 문장을 출력
                     touchXXX.SetActive(true);
                     npcPanel.SetActive(true);
-                    npcText.text = npcName(i);
+                    npcText.text = npcName(i);               
                 }
                 npcList[i] = true;
                 npcGage[i] = 100; // List의 항목을 true로, Gage는 100으로 고정
