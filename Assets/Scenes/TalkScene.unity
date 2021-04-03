@@ -3308,6 +3308,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   touchXXX: {fileID: 0}
+  isFull: 0
 --- !u!4 &677488590
 Transform:
   m_ObjectHideFlags: 0
