@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class tutorialManager : MonoBehaviour
 {
 
     public static bool tutorial;
 
-    public GameObject panel, touchX, player;
+    public static bool mgTutorial = true; // 미니게임 튜토리얼 출력 여부
+
+    public GameObject panel, touchX, player, mgPanel;
     public GameObject[] page = new GameObject [4];
 
     // Start is called before the first frame update
@@ -39,6 +42,26 @@ public class tutorialManager : MonoBehaviour
         panel.SetActive(false);
         player.SetActive(true);
         tutorial = false;
+    }
+
+    public void miniGamePanel(){
+        if(mgTutorial) {
+            touchX.SetActive(true);
+            mgPanel.SetActive(true);
+        }
+        else SceneManager.LoadScene("MiniGame");
+    }
+
+    public void skipOK(){ // 미니게임 튜토리얼 스킵
+        mgTutorial = false;
+        Debug.Log("미니게임 튜토리얼 스킵");
+        //SceneManager.LoadScene("MiniGame");
+    }
+
+    public void skipNo(){ // 미니게임 튜토리얼 진행
+        mgTutorial = true;
+        Debug.Log("미니게임 튜토리얼 진행");
+        //SceneManager.LoadScene("MiniGame");
     }
 
     // Update is called once per frame
