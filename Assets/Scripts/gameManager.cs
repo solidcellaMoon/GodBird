@@ -21,6 +21,7 @@ public class saveData
     public bool startpanelSee;
     public int weekNum;
     public int gameRetry;
+    public bool mgTutorial; // 추가(지현)
      
    
 }
@@ -46,6 +47,9 @@ public class gameManager : MonoBehaviour
         IntroUI.startpanelSee = true;      
         dateManager.weekNum = 0; // week: n주차
         dateManager.gameRetry = 3; //미니게임 가능 횟수 
+
+        //***추가된 변수들(지현)
+        tutorialManager.mgTutorial = true; // 미니게임 튜토리얼 표시 여부
        
     }
      
@@ -144,6 +148,7 @@ public class gameManager : MonoBehaviour
             data.npcList[i] = false;
         }
         data.tutorial = true;
+        data.mgTutorial = true; // 추가(지현)
         data.startpanelSee = true;
 
         data.weekNum = 0; // week: n주차
@@ -177,7 +182,8 @@ public class gameManager : MonoBehaviour
             npcManager.npcList[i] = data.npcList[i];
         }
         
-        tutorialManager.tutorial = data.tutorial;    
+        tutorialManager.tutorial = data.tutorial;  
+        tutorialManager.mgTutorial = data.mgTutorial; // 추가(지현)  
         IntroUI.startpanelSee = data.startpanelSee;
 
         dateManager.weekNum=data.weekNum;  
