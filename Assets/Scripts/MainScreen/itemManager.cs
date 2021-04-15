@@ -22,11 +22,14 @@ public class itemManager : MonoBehaviour
         if(birdNum < 0) birdNum = 0;
 
         if(dateManager.weekNum == 0) debtNum = 150;
-        else if(dateManager.dateNum % 7 == 0) {
+        else if(dateManager.dateNum % 7 == 0 && !dateManager.decideDebt) {
             debtRand = Random.Range(50,101);
             debtNum = debtRand + 100 * (dateManager.weekNum + 1);
          
             if (!successEvent.isClear) debtNum += debtManager.debt;
+
+            dateManager.decideDebt = true;
+            gameManager.Save();
         }
         //debtNum = 100 + debtRand * (dateManager.weekNum + 1);
 

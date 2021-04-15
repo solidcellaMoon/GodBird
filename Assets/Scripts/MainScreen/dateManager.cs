@@ -15,6 +15,8 @@ public class dateManager : MonoBehaviour
 
     public static int gameRetry = 3; // 일주일간 미니게임 가능 횟수
 
+    public static bool decideDebt;
+
 
     // Start is called before the first frame update
     void Start()

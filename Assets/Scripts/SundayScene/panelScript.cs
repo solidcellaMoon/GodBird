@@ -10,6 +10,9 @@ public class panelScript : MonoBehaviour
 
     void Awake(){
         chDay = churchManager.chDay;
+
+        dateManager.decideDebt = false;
+        gameManager.Save();
     }
 
     public void scsPanelClose(){

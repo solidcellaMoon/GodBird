@@ -22,8 +22,9 @@ public class saveData
     public int weekNum;
     public int gameRetry;
     public bool mgTutorial; // 추가(지현)
-     
-   
+    public bool decideDebt;
+
+
 }
 public class gameManager : MonoBehaviour
 {
@@ -47,7 +48,7 @@ public class gameManager : MonoBehaviour
         IntroUI.startpanelSee = true;      
         dateManager.weekNum = 0; // week: n주차
         dateManager.gameRetry = 3; //미니게임 가능 횟수 
-
+        dateManager.decideDebt = false; //그 주의 유지보수값이 결정됐는지 여부. 결정됐다면 다시 계산하지 않는다.
         //***추가된 변수들(지현)
         tutorialManager.mgTutorial = true; // 미니게임 튜토리얼 표시 여부
        
@@ -153,7 +154,8 @@ public class gameManager : MonoBehaviour
 
         data.weekNum = 0; // week: n주차
         data.gameRetry = 3; //미니게임 가능 횟수 
-       
+        data.decideDebt = false;
+
         File.WriteAllText(Application.persistentDataPath + "/clearInfo.json", JsonUtility.ToJson(data));
         //Debug.Log("저장 파일 생성!");
     }
@@ -187,9 +189,9 @@ public class gameManager : MonoBehaviour
         IntroUI.startpanelSee = data.startpanelSee;
 
         dateManager.weekNum=data.weekNum;  
-        dateManager.gameRetry = data.gameRetry;  
-      
+        dateManager.gameRetry = data.gameRetry;
 
+        dateManager.decideDebt = data.decideDebt;
     }
     //세이브 함수 
     public static void Save()
@@ -213,8 +215,8 @@ public class gameManager : MonoBehaviour
         data.startpanelSee= data.startpanelSee;
 
         data.weekNum= dateManager.weekNum;  
-        data.gameRetry = dateManager.gameRetry;  
-        
+        data.gameRetry = dateManager.gameRetry;
+        data.decideDebt = dateManager.decideDebt;
         File.WriteAllText(Application.persistentDataPath + "/clearInfo.json", JsonUtility.ToJson(data));
         Debug.Log("세이브!");
     }
