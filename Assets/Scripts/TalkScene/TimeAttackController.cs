@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TimeAttackController : MonoBehaviour
 {
     public Image timeBarImage;
-    public float totalTime = 3f;
+    public float totalTime = 5f;
     public float timeLeft;
     public static bool failed = false;
 

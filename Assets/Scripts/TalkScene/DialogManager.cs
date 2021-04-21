@@ -37,6 +37,10 @@ public class DialogManager : MonoBehaviour
 
     public AudioSource talkBgm, clockBgm, goodBgm, sosoBgm, badBgm;
 
+    // 안드로이드 빌드시, GameObject에 대화문 선언 script 넣어서 가져오기
+    public GameObject DialogData;
+
+
     void infoInit(){
         talkStart = true;
         // 장소 이름
@@ -58,6 +62,7 @@ public class DialogManager : MonoBehaviour
 
         placeText.GetComponent<Text>().text = placeName;
 
+        /*
         string jsonFilePath = Application.dataPath + "/Resources/BirdDialogue/" + birdName + jsonFile;
 
         if (File.Exists(jsonFilePath))
@@ -80,6 +85,33 @@ public class DialogManager : MonoBehaviour
             }
         }
         else Debug.Log("json file error");
+        */
+
+        // 안드로이드 빌드용 데이터 Script에서 가져오기
+        switch (birdName)
+        {
+            case "crow":
+                problems = DialogData.GetComponent<crow>().crowDic;
+                break;
+            case "chick":
+                problems = DialogData.GetComponent<chick>().chickDic;
+                break;
+            case "pigeon":
+                problems = DialogData.GetComponent<pigeon>().pigeonDic;
+                break;
+            case "penguin":
+                problems = DialogData.GetComponent<penguin>().penguinDic;
+                break;
+            case "parrot":
+                problems = DialogData.GetComponent<parrot>().parrotDic;
+                break;
+            case "paradise":
+                problems = DialogData.GetComponent<paradise>().paradiseDic;
+                break;
+            default:
+                problems = DialogData.GetComponent<chick>().chickDic;
+                break;
+        }
 
         SetProblemNum();
         StartCoroutine(printTxt("meeting"));
@@ -117,7 +149,7 @@ public class DialogManager : MonoBehaviour
         soso = "> " + problems[problemNumber - 1]["soso"];
 
         timeBar = timeBarImage.GetComponent<TimeAttackController>();
-        if (timeBar) timeBar.timeLeft = 3f;
+        if (timeBar) timeBar.timeLeft = 5f;
         else Debug.Log("other script object error");
         
         example1Text.GetComponent<Text>().text = example1;
