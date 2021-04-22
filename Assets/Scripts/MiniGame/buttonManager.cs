@@ -30,7 +30,7 @@ public class buttonManager : MonoBehaviour
     public void DashOff(){
         dashScript.inputDashUp = true; // dash버튼을 떼었을 때
     }
-
+    /*
     // 상승 모션 - up버튼을 눌렀는지 여부를 확인---
     public void UpPressed(){
         playerScript.inputUp = true; // up버튼을 눌렀을 때
@@ -47,6 +47,6 @@ public class buttonManager : MonoBehaviour
 
     public void DownOff(){
         playerScript.inputDown = false; // down버튼을 떼었을 때
-    }
+    }*/
 
 }
