@@ -1,3 +1,5 @@
+<div align=center>
+  
 # 🕊️GodBird: 아무말 게임
 
 ![logo](./img/logo_big.png)
@@ -8,6 +10,7 @@
 
 [문지현](https://github.com/solidcellaMoon) [이다영](https://github.com/dayoung100) [김시현](https://github.com/kimsihyun00) [최지원](https://github.com/jiwon199) [이서영](https://github.com/dltjdud808)
 
+</div>
 
 
 #### 목차
