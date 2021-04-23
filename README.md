@@ -10,8 +10,6 @@
 
 [문지현](https://github.com/solidcellaMoon) [이다영](https://github.com/dayoung100) [김시현](https://github.com/kimsihyun00) [최지원](https://github.com/jiwon199) [이서영](https://github.com/dltjdud808)
 
-</div>
-
 
 #### 목차
 
@@ -47,7 +45,6 @@
 ### 새들에게 그 분의 말씀을 널리 알리기 위한 외출이 시작됩니다!
 
 
-<div align=center>
 
 # Contents
 
