@@ -125,7 +125,7 @@
 
 <div align=center>
 
-![캐릭터 수집](./img/cts3.png)
+![캐릭터 수집](./img/cts3.PNG)
 
 
 
