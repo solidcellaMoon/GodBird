@@ -15,6 +15,7 @@ public class tutorialScript : MonoBehaviour
         if(tutorialManager.mgTutorial){
             touchX.SetActive(true);
             tutorialUI.SetActive(true);
+            tutorialManager.mgTutorial = false; // 튜토리얼은 단 한번만 표시!
         }
         else{
             startUI.SetActive(true);

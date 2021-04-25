@@ -23,6 +23,7 @@ public class saveData
     public int gameRetry;
     public bool mgTutorial; // 추가(지현)
     public bool decideDebt;
+    public bool gameClear; // 게임 1회차 클리어 여부 저장(지현)
 
 
 }
@@ -51,6 +52,7 @@ public class gameManager : MonoBehaviour
         dateManager.decideDebt = false; //그 주의 유지보수값이 결정됐는지 여부. 결정됐다면 다시 계산하지 않는다.
         //***추가된 변수들(지현)
         tutorialManager.mgTutorial = true; // 미니게임 튜토리얼 표시 여부
+        gameManager.gameClear = false; // 게임 1회차 클리어 여부 저장(지현)
        
     }
      
@@ -59,11 +61,16 @@ public class gameManager : MonoBehaviour
     public static int gameLifeNum = 4; // 미니게임 초기 하트 개수 (최대 6개까지 가능)
     public static int gameLimit = 399; // 한 판에 콩 400개 이상 못얻음
 
+    // 게임 클리어 변수
+    public static bool gameClear = false; // 1회차를 클리어하면 true로 (지현)
+
     //public static gameManager instance;
 
     void Awake(){
      
         DontDestroyOnLoad(gameObject);
+
+        if(gameClear) gameRetry = 7; // 1회차 이상은 미니게임 무제한으로 가능 (7일에 7번까지)
         
         DayValues(); // 게임 날짜 관리
         MiniValues(); // 미니게임 난이도 관리
@@ -71,6 +78,7 @@ public class gameManager : MonoBehaviour
         DebtValues(); // 빚 난이도 관리
         BldgValues(); // 빌딩 레벨 관리
         NpcValues(); // npc 호감도, 능력 관리
+
     }
 
     void DayValues(){
@@ -192,6 +200,9 @@ public class gameManager : MonoBehaviour
         dateManager.gameRetry = data.gameRetry;
 
         dateManager.decideDebt = data.decideDebt;
+
+        gameManager.gameClear = data.gameClear; // 추가(지현)
+
     }
     //세이브 함수 
     public static void Save()
@@ -211,7 +222,8 @@ public class gameManager : MonoBehaviour
             data.npcEnc[i] = npcManager.npcEnc[i];
             data.npcList[i] = npcManager.npcList[i];
         }
-        data.tutorial = tutorialManager.tutorial;
+        data.tutorial = tutorialManager.tutorial; // 지현
+        data.gameClear = gameManager.gameClear; // 지현
         data.startpanelSee= data.startpanelSee;
 
         data.weekNum= dateManager.weekNum;  
