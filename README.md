@@ -51,7 +51,7 @@
 
 ## 신의 축복: 재화를 모아보자!
 
-<img src="./img/축복.png" alt="축복" style="zoom:50%;" />
+<img src="./img/축복.png" width="400">
 
 ### 장애물을 피하거나 공격하며 재화를 얻어봅시다!
 
@@ -81,7 +81,7 @@
 
 ## 외출: 다양한 새들과 만나자!
 
-<img src="./img/코스.png" alt="코스" style="zoom:50%;" />
+<img src="./img/코스.png" width="400">
 
 ### 🎲지역에 따라 출현하는 새가 달라집니다!
 
@@ -90,7 +90,7 @@
 
 
 
-<img src="./img/대화1.png" alt="대화" style="zoom:50%;" />
+<img src="./img/대화1.png" width="400">
 
 ### 💬새들의 성격에 맞춰 대화해봅시다!
 
