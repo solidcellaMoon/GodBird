@@ -25,6 +25,8 @@ public class saveData
     public bool decideDebt;
     public bool gameClear; // 게임 1회차 클리어 여부 저장(지현)
 
+    public int ClearNum; 
+
 
 }
 public class gameManager : MonoBehaviour
@@ -53,6 +55,7 @@ public class gameManager : MonoBehaviour
         //***추가된 변수들(지현)
         tutorialManager.mgTutorial = true; // 미니게임 튜토리얼 표시 여부
         gameManager.gameClear = false; // 게임 1회차 클리어 여부 저장(지현)
+        successEvent.ClearNum = 0; // 건물 증축 성공 횟수
        
     }
      
@@ -70,7 +73,7 @@ public class gameManager : MonoBehaviour
      
         DontDestroyOnLoad(gameObject);
 
-        if(gameClear) gameRetry = 7; // 1회차 이상은 미니게임 무제한으로 가능 (7일에 7번까지)
+        //if(gameClear) gameRetry = 7; // 1회차 이상은 미니게임 무제한으로 가능 (7일에 7번까지)
         
         DayValues(); // 게임 날짜 관리
         MiniValues(); // 미니게임 난이도 관리
@@ -144,7 +147,7 @@ public class gameManager : MonoBehaviour
         saveData data = new saveData();
 
         //저장값들을 전부 초기값으로 설정 
-        data.beanNum = 250; // 보유 콩 개수
+        data.beanNum = 25000000; // 보유 콩 개수
         data.diceNum = 10; // 보유 주사위 개수
         data.birdNum = 1; // 보유 신도 수
         data.dateNum = -1; // 게임상의 날짜
@@ -163,6 +166,8 @@ public class gameManager : MonoBehaviour
         data.weekNum = 0; // week: n주차
         data.gameRetry = 3; //미니게임 가능 횟수 
         data.decideDebt = false;
+        data.gameClear = false; // 게임 클리어 여부(지현)
+        data.ClearNum = 0; // 증축 성공 횟수(지현)
 
         File.WriteAllText(Application.persistentDataPath + "/clearInfo.json", JsonUtility.ToJson(data));
         //Debug.Log("저장 파일 생성!");
@@ -202,6 +207,7 @@ public class gameManager : MonoBehaviour
         dateManager.decideDebt = data.decideDebt;
 
         gameManager.gameClear = data.gameClear; // 추가(지현)
+        successEvent.ClearNum = data.ClearNum; // 추가(지현)
 
     }
     //세이브 함수 
@@ -224,6 +230,7 @@ public class gameManager : MonoBehaviour
         }
         data.tutorial = tutorialManager.tutorial; // 지현
         data.gameClear = gameManager.gameClear; // 지현
+        data.ClearNum = successEvent.ClearNum; // 지현
         data.startpanelSee= data.startpanelSee;
 
         data.weekNum= dateManager.weekNum;  

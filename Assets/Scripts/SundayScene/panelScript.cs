@@ -19,13 +19,20 @@ public class panelScript : MonoBehaviour
 
         if(successEvent.isClear) { //빚을 갚은 상태일 때
 
+            Debug.Log("성공횟수:"+successEvent.ClearNum);
+
             foreach(int week in churchManager.chDay){
-                if (successEvent.ClearNum == chDay[chDay.Length - 1]){
+                if(successEvent.ClearNum > chDay[chDay.Length - 1]){ // 엔딩 이후
+                    scsPanel.SetActive(false); // 성공여부 팝업을 닫음
+                    SceneManager.LoadScene("eventScene");
+                    break;
+                }
+                else if (successEvent.ClearNum == chDay[chDay.Length - 1]){
                     scsPanel.SetActive(false); // 성공여부 팝업을 닫고
                     edPanel.SetActive(true); // 엔딩 팝업을 오픈
                     break;
                 }
-                if(successEvent.ClearNum == week){ //레벨업하는 주차
+                else if(successEvent.ClearNum == week){ //레벨업하는 주차
                     scsPanel.SetActive(false); // 성공여부 팝업을 닫고
                     lvUpPanel.SetActive(true); // 레벨업 팝업을 오픈
                     break;
