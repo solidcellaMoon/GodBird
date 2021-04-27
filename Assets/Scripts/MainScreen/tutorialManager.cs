@@ -13,6 +13,7 @@ public class tutorialManager : MonoBehaviour
     public GameObject panel, touchX, player, mgPanel;
     public GameObject[] page = new GameObject [4];
 
+    public GameObject rejectPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,11 +46,13 @@ public class tutorialManager : MonoBehaviour
     }
 
     public void miniGamePanel(){
-        if(mgTutorial) {
+        if (mgTutorial)
+        {
             touchX.SetActive(true);
             mgPanel.SetActive(true);
         }
-        else SceneManager.LoadScene("MiniGame");
+        else if (dateManager.gameRetry > 0) SceneManager.LoadScene("MiniGame");
+        else rejectPanel.SetActive(true);
     }
 
     public void skipOK(){ // 미니게임 튜토리얼 스킵
