@@ -9,6 +9,9 @@ public class openClearMode : MonoBehaviour
     {
         // 게임을 클리어시 gameClear 변수를 true로 설정 (무제한 모드용)
         gameManager.gameClear = true;
+        dateManager.dateNum ++; // 월요일로 넘기기 위해!! 
+        dateManager.weekNum ++;
+        gameManager.Save();
         
     }
     
