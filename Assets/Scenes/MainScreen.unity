@@ -5913,6 +5913,7 @@ MonoBehaviour:
   - {fileID: 158890276}
   - {fileID: 823729006}
   - {fileID: 580081586}
+  rejectPanel: {fileID: 1438199818}
 --- !u!1 &706158495
 GameObject:
   m_ObjectHideFlags: 0
